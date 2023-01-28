@@ -1,0 +1,142 @@
+.header {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: var(--white);
+  z-index: 999;
+  box-shadow: 0px 2px 2px #0000001a;
+  @include media-md {
+    position: fixed;
+  }
+  @media screen and (min-width: 768px) {
+    &.sticking {
+      position: fixed;
+      animation: menu_sticky 0.5s;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+      background-color: var(--white);
+      z-index: 1000;
+      @keyframes menu_sticky {
+        0% {
+          margin-top: -120px;
+          opacity: 0;
+        }
+        50% {
+          margin-top: -64px;
+          opacity: 0;
+        }
+        100% {
+          margin-top: 0;
+          opacity: 1;
+        }
+      }
+      .header_wrapper {
+        &-left {
+          .logo {
+            max-width: 120px;
+          }
+        }
+      }
+    }
+  }
+  &.dark {
+    .main-menu {
+      ul {
+        li {
+          a {
+            color: var(--black);
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 768px) {
+      .header-actions {
+        ul {
+          li {
+            svg {
+              width: 20px;
+              fill: var(--black);
+            }
+            a {
+              color: var(--black);
+            }
+          }
+        }
+      }
+    }
+  }
+  &_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 0;
+    &-left {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      .logo {
+        max-width: 180px;
+        @include media-sm {
+          flex: 0 0 100px;
+        }
+        width: 100%;
+      }
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+  .main-menu {
+    margin-left: 45px;
+    @include media-md {
+      display: none;
+    }
+    ul {
+      li {
+        display: inline-block;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  .header-actions {
+    ul {
+      line-height: 1;
+      li {
+        display: inline-block;
+        &:not(:first-child) {
+          margin-left: 25px;
+        }
+        svg {
+          width: 20px;
+        }
+        .text {
+          margin-left: 10px;
+        }
+        a {
+          display: flex;
+          align-items: center;
+          position: relative;
+          > .cart-contents,
+          > .yith-wcwl-items-count {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            display: inline-block;
+            padding: 2px 5px;
+            border-radius: 25px;
+            font-size: 10px;
+            background-color: var(--primary);
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+}

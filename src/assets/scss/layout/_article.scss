@@ -1,0 +1,145 @@
+.post {
+  margin-bottom: 35px;
+  @include media-sm {
+    margin-bottom: 20px;
+  }
+  &-container {
+    background-color: var(--light);
+    border-radius: 15px;
+    padding: 20px;
+    @include media-sm {
+      padding: 10px;
+    }
+  }
+  &-single {
+    max-width: 992px;
+    margin: 0 auto;
+    .post-container {
+      padding: 0;
+      background-color: transparent;
+    }
+    .post-title {
+      margin: 0 0 14px !important;
+    }
+    .post-body {
+      padding: 25px;
+      @include media-sm {
+        padding: 0;
+        text-align: initial !important;
+      }
+    }
+    .post-content {
+    }
+  }
+  .featured-media {
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 15px;
+    &:hover {
+      img {
+        transform: scale(1.15);
+      }
+    }
+    img {
+      object-fit: contain;
+      height: 100% !important;
+      width: 100% !important;
+      margin-bottom: 0 !important;
+      transition: all 0.4s ease;
+    }
+  }
+  .post-body {
+    @include media-sm {
+      text-align: center;
+    }
+  }
+  .post-meta {
+    margin-bottom: 5px;
+    span {
+      display: inline-block;
+      font-size: 0.875rem;
+      color: var(--dark);
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+      svg {
+        width: 14px;
+        max-height: 14px;
+        margin-right: 5px;
+        vertical-align: middle;
+        fill: var(--primary);
+      }
+    }
+    .post-categories {
+      display: inline-block;
+      li {
+        display: inline-block;
+        &:not(:last-child) {
+          margin-right: 5px;
+          a{
+             &::after {
+              content: " ,"; 
+            }
+          }
+        }
+        a {
+          display: block; 
+        }
+      }
+    }
+  }
+  .post-title {
+    @include media-sm {
+      margin-bottom: 0;
+    }
+  }
+  .post-excerpt,
+  .post-more {
+    @include media-sm {
+      display: none;
+    }
+  }
+  .post-more {
+    margin-top: 20px;
+  }
+  .post-footer {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-sm {
+      flex-direction: column;
+    }
+    .post-tags {
+      span {
+        margin-right: 10px;
+      }
+      a {
+        display: inline-block;
+        padding: 1px 10px;
+        text-decoration: none;
+        border-radius: 3px;
+        margin: 0 10px 10px 0;
+        background-color: var(--primary);
+        color: var(--black);
+        &:hover {
+          background-color: var(--primary);
+        }
+      }
+    }
+    .post-share {
+      @include media-sm {
+        margin-top: 20px;
+      }
+      span {
+        margin-right: 10px;
+      }
+      a {
+        display: inline-block;
+        &:not(:last-child) {
+          margin-right: 12px;
+        } 
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.tabs{
+  .tabs-head{   
+    ul{
+      margin: 0;
+      padding:0;
+      li{
+        display: inline-block; 
+        cursor: pointer;
+        outline: none;
+        &.active,
+        &:hover{ 
+        } 
+      }
+    }
+  } 
+  .content{ 
+  }
+}

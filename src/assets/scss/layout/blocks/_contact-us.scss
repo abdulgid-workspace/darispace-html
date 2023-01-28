@@ -1,0 +1,32 @@
+.contact-us {
+  .contact-info {
+    .item {
+      margin-bottom: 30px;
+      h3{
+        color: var(--primary);
+      }
+    }
+    .call-us {
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+          a {
+            display: flex;
+
+            align-items: center;
+          }
+          svg {
+            width: 18px;
+            max-height: 18px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  .map{
+    margin-top: 50px;
+  }
+}

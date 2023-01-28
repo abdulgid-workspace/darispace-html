@@ -1,0 +1,23 @@
+.product-box {
+  .product-container{
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .35s;
+    &:hover{
+          transform: scale(1.015); 
+    box-shadow: 0 5px 15px -1px #62626270;
+    }
+  }
+  .product-body{
+    padding: 12px;
+  }
+  .product-title{
+    margin-bottom: 0;
+  }
+  .featured-media{
+  img{
+      width: 100%;
+  }
+  }
+}

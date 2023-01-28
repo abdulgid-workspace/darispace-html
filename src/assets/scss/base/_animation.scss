@@ -1,0 +1,140 @@
+// main.main {
+//   transition: 0.4s;
+//   opacity: 1;
+// }
+
+// html.is-animating main.main {
+//   opacity: 0;
+// }
+
+.preloader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 99999999999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease-in-out;
+}
+.preloader .preloader-bg {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--primary);
+  height: 1000px;
+  width: 1000px;
+  top: 20%;
+  transform: scale(2);
+  transition: 0.6s ease-in-out;
+}
+.preloader .preloader-body {
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+.preloader .preloader-body .loading {
+  opacity: 0;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.preloader .preloader-body .loading-bar {
+  margin-bottom: 15px;
+  width: 1px;
+  height: 80vh;
+  margin: 0 auto;
+  border-radius: 2px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.preloader .preloader-body .loading-bar .bar {
+  width: 100%;
+  height: 0;
+  background-color: #231e41;
+}
+.preloader.hidden {
+  pointer-events: none;
+  transition-delay: 0.2s;
+}
+.preloader.hidden .preloader-bg {
+  transform: scale(0);
+  transition-delay: 0.2s;
+  opacity: 1;
+}
+.preloader.hidden .preloader-body {
+  transform: translateY(30%);
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.load {
+  border-radius: 50%;
+  background-color: var(--primary);
+  width: 80vw;
+  height: 80vw;
+  left: 50%;
+  bottom: 0;
+  margin-bottom: -40vw;
+  pointer-events: none;
+  position: fixed;
+  margin-left: -40vw;
+  transform: scale(0);
+  z-index: 9;
+  opacity: 0.9;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.05);
+  transition: 0.6s ease-in-out;
+}
+
+html.is-animating .load {
+  top: 0;
+  left: 50%;
+  margin-top: -40vw;
+  bottom: auto;
+  transform: scale(2);
+  pointer-events: all;
+}
+
+main.main {
+  transition: 0.6s ease-in-out;
+  opacity: 1;
+}
+
+html.is-animating main.main {
+  opacity: 0;
+}
+
+.main-menu {
+  opacity: 1;
+  transition: 0.1s ease-in-out;
+}
+
+html.is-animating .main-menu {
+  opacity: 0.999;
+}
+html.is-animating .main-menu li a:before {
+  transform: scale(0);
+}
+html.is-animating .main-menu li ul {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@media (max-width: 992px) {
+  html.is-animating .load {
+    transform: scale(3);
+  }
+
+  html.is-animating .main-menu {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}
+@media (max-width: 768px) {
+  html.is-animating .load {
+    transform: scale(6.5);
+  }
+}

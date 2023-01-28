@@ -1,0 +1,26 @@
+.content-page {
+  min-height: 45vh;
+  .page-container {
+    padding-bottom: 60px;
+  }
+  @include media-md {
+    padding-bottom: 40px;
+  }
+  @include media-sm {
+    padding-bottom: 20px;
+  }
+}
+
+#main {
+  @include media-md {
+    margin: 71px 0 20px;
+  }
+}
+
+.not-found-results {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--light);
+  border-radius: 5px;
+  font-size: 1.1rem;
+}

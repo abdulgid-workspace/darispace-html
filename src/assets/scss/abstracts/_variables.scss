@@ -1,0 +1,18 @@
+:root {
+  --primary: #f0515e;
+  --primary-active: #d14450;
+  --dark: #2f2f3f;
+  --black: #000;
+  --white: #fff;
+  --light: #f8f7f1;
+  --grey: #ededed;
+}
+
+// Variables Media
+
+$media-sm: "max-width: 576px";
+$media-md: "max-width: 768px";
+$media-lg: "max-width: 992px";
+$media-tablet: "max-width: 1024px";
+$media-xl: "max-width: 1200px";
+$media-xxl: "max-width: 1920px";

@@ -1,0 +1,131 @@
+.slideshow {
+  .swiper-slide {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .slide-wrap {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      padding: 180px 0;
+      background-color: #00000096;
+      box-sizing: border-box;
+      height: 42vh;
+      padding: 50px 0;
+      .container {
+      }
+    }
+
+    .slide-bg {
+      @include overlay;
+      z-index: 1;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .slide-inner {
+      max-width: 550px;
+      * {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: 0.3s ease;
+      }
+    }
+    .title {
+      position: relative;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      transition-delay: 0.8s;
+      &::after {
+        content: "";
+        display: block;
+        width: 150px;
+        max-width: 90%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        background-color: var(--primary);
+      }
+    }
+    .title,
+    .description {
+      color: var(--white);
+    }
+    .description {
+      transition-delay: 1s;
+    }
+    .links {
+      margin-top: 42px;
+      transition-delay: 1.2s;
+      .btn {
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+    }
+    &-active {
+      .slide-bg {
+        @include overlay;
+        z-index: 1;
+        img {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          animation: cssAnimation 4s 0.4s ease-in-out forwards;
+
+          @keyframes cssAnimation {
+            from {
+              -webkit-transform: scale(1) translate(0px);
+            }
+            to {
+              -webkit-transform: scale(1.3) translate(0px);
+            }
+          }
+        }
+      }
+      .slide-inner {
+        * {
+          opacity: 1;
+          transform: translateY(0);
+          transition-duration: 0.3s;
+          transition-timing-function: ease;
+        }
+      }
+    }
+  }
+  .swiper-button {
+    &-next,
+    &-prev {
+      width: 35px;
+      height: 35px;
+      border: 1px solid #fff;
+      --swiper-navigation-size: 16px;
+      color: #fff;
+    }
+    &-prev {
+      left: calc((100vw - 1200px) / 2 - 50px);
+    }
+    &-next {
+      right: calc((100vw - 1200px) / 2 - 50px);
+    }
+  }
+  .swiper-pagination {
+    bottom: 20px;
+    &-bullet {
+      width: 14px;
+      height: 14px;
+      border: 1px solid #fff;
+      transform: scale(1);
+      background-color: transparent;
+      opacity: 1;
+      --swiper-navigation-size: 12px;
+      &-active-main {
+        background: var(--white);
+      }
+    }
+  }
+}

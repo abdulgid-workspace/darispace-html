@@ -1,0 +1,28 @@
+.title-head {
+  margin-bottom: 20px;
+  color: var(--dark);
+  span{
+    position: relative;
+    display: inline-block;
+    padding-bottom: 18px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-image: url(../images/vectors/head_icon.png);
+      background-size: auto;
+      background-position: 100%;
+      width: 30%;
+      height: 7px;
+    }
+  }
+  &.title-center {
+    text-align: center;
+    span::after {
+      margin: 0 auto;
+      background-position: 50% 100%;
+    }
+  }
+}

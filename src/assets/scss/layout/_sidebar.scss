@@ -1,0 +1,6 @@
+.sidebar-main {
+  padding-left: 10px;
+  @include media-xl {
+    padding-left: 0;
+  }
+}

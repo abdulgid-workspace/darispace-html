@@ -1,0 +1,84 @@
+// Mixin Prefix
+
+@mixin prefix($property, $value) {
+  $prefixs: (webkit moz o ms);
+  @each $prefix in $prefixs {
+    #{'-'+$prefix+'-'+$property}: $value;
+  }
+  #{$property}: $value;
+}
+
+// Mixin Transition
+
+@mixin transition($i, $s) {
+  -webkit-transition: $i $s ease-in-out;
+  -moz-transition: $i $s ease-in-out;
+  -o-transition: $i $s ease-in-out;
+  transition: $i $s ease-in-out;
+}
+
+// Mixin Overlay
+
+@mixin overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Mixin Size
+
+@mixin size($i) {
+  width: $i;
+  height: $i;
+  line-height: $i;
+  text-align: center;
+}
+
+// Mixin Media Queries
+
+@mixin media-custom($i) {
+  @media ($i) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media ($media-sm) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media ($media-md) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media ($media-lg) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media ($media-tablet) {
+    @content;
+  }
+}
+
+
+@mixin media-xl {
+  @media ($media-xl) {
+    @content;
+  }
+}
+
+@mixin media-xxl {
+  @media screen and (min-width: 1920px) and (min-width: 2500px) {
+    @content;
+  }
+}

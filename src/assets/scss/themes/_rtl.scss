@@ -1,0 +1,30 @@
+html[lang="ar"],
+html[dir="rtl"] {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6,
+  blockquote,
+  p,
+  body,
+  input,
+  select,
+  textarea,
+  button,
+  .btn {
+    font-family: "Tajawal" !important;
+    letter-spacing: 0 !important;
+  }
+  .xoo-wsc-close {
+    left: auto;
+    right: 20px;
+  } 
+}

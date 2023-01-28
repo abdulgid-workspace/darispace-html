@@ -1,0 +1,16 @@
+.breadcrumb { 
+  li {
+    display: inline-block;
+    color: var(--color-page-title);
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  a {
+    font-weight: 600;
+    color: var(--color-page-title);
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}

@@ -1,0 +1,75 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.2;
+    margin: 0 0 14px;
+}
+.h1,
+h1 {
+    font-size: clamp(2.1875rem, 4vw, 60px);
+}
+
+.h2,
+h2 {
+    font-size: clamp(1.625rem, 3vw, 2.5rem);
+}
+.h3,
+h3 {
+    font-size: 1.625rem;
+}
+ 
+.h4,
+h4 {
+    font-size: 1.25rem;
+}
+
+.h5,
+h5 {
+    font-size: 1.125rem;
+}
+
+.h6,
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.75rem;
+    font-size: 1rem;
+    margin-bottom: 0.9375rem;
+}
+blockquote {
+    font-size: 14px;
+    line-height: 2em;
+    border-left: 2px solid;
+    border-color: var(--primary);
+    font-style: italic;
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 50px;
+    margin-right: 70px;
+    margin-left: 70px;
+    @include media-md {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+strong,
+b {
+    font-weight: bold;
+}
