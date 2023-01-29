@@ -55,14 +55,31 @@ gulp.task("html", function () {
 // Sass Task
 gulp.task("sass", () => {
   return gulp
+    // .src(paths.sass)
+    // .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    // .pipe(autoprefixer("last 2 versions"))
+    // .pipe(concat("app.css"))
+    // .pipe(rename({ suffix: ".min" }))
+    // .pipe(sourcemaps.write())
+    // .pipe(gulp.dest(outputDir + "assets/css/"))
+    // .pipe(notify("Sass Task Done"));
+
     .src(paths.sass)
-    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-    .pipe(autoprefixer("last 2 versions"))
-    .pipe(concat("app.css"))
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(outputDir + "assets/css/"))
-    .pipe(notify("Sass Task Done"));
+      .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+      .pipe(autoprefixer("last 2 versions"))
+      .pipe(concat("app.css"))
+      .pipe(rename({ suffix: ".min" }))
+      // .pipe(sourcemaps.write())
+      .pipe(gulp.dest(outputDir + "assets/css/"))
+      .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+      .pipe(autoprefixer("last 2 versions"))
+      .pipe(concat("app.css"))
+      .pipe(rtlcss())
+      .pipe(rename({ suffix: "-rtl" }))
+      .pipe(rename({ suffix: ".min" }))
+      // .pipe(sourcemaps.write())
+      .pipe(gulp.dest(outputDir + "assets/css/"))
+      .pipe(notify("Sass Task Done"))
 });
 
 // Fonts Task

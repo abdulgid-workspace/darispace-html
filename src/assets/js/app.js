@@ -1,5 +1,6 @@
 // Import Vendors
 import $ from "jquery";
+import { Swiper, Pagination, Autoplay, Thumbs, Navigation } from "swiper";
 // import * as Popper from "@popperjs/core";
 // import * as bootstrap from "bootstrap";
 // // Import Vendors
@@ -214,4 +215,66 @@ window.jQuery = $;
   });
 })(jQuery);
 
- 
+window.addEventListener("DOMContentLoaded", function () {
+  (function () {
+    Swiper.use([Navigation, Pagination, Autoplay]);
+
+    // properties Slides
+    const properties = new Swiper(".properties-carousal .swiper", {
+      speed: 800,
+      spaceBetween: 20,
+      autoplay: {
+        delay: 5000,
+      },
+      pagination: {
+        el: ".properties-carousal .swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      navigation: {
+        nextEl: ".properties-carousal .swiper-button-next",
+        prevEl: ".properties-carousal .swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        480: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
+      },
+    });
+
+    // partners Slides
+    const partners = new Swiper(".partners-section .swiper", {
+      speed: 800,
+      spaceBetween: 20,
+      autoplay: {
+        delay: 5000,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+        },
+        480: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        992: {
+          slidesPerView: 5,
+        },
+        1200: {
+          slidesPerView: 6,
+        },
+      },
+    });
+  })();
+});

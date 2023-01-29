@@ -29,8 +29,9 @@
           }
         }
         a {
-          font-size: 0.875rem;
-          font-weight: 500;
+        font-weight: 500;
+          font-size: 1rem;
+        line-height: 1.25rem;
           color: var(--white);
 
           &:hover {
@@ -110,8 +111,8 @@
     }
     > li {
       a {
-        font-weight: 600;
-        font-size: 14px;
+       font-weight: 500;
+          font-size: 1rem;
         line-height: 1.25rem;
         padding: 0.75rem 0;
         text-decoration: none;

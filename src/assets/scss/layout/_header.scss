@@ -7,47 +7,62 @@
   z-index: 999;
   @include media-md {
     position: fixed;
-  }
-  @media screen and (min-width: 768px) {
-    &.sticking {
-      position: fixed;
-      animation: menu_sticky 0.5s;
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
-      background-color: var(--white);
-      z-index: 1000;
-      .main-menu {
-        li > a {
-          color: var(--black);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+    background-color: var(--white);
+    .header-actions {
+      li {
+        &::after {
+          border-color: var(--black) !important;
         }
-      }
-      .header-actions {
-        li {
-          &::after{
-            border-color: var(--black)!important;
-          }
-         & > a {
-          color: var(--black);
+        & > a {
+          color: var(--black) !important;
         }
-        .btn{
-            border-color: var(--black);
-        }
-        }
-      }
-      @keyframes menu_sticky {
-        0% {
-          margin-top: -120px;
-          opacity: 0;
-        }
-        50% {
-          margin-top: -64px;
-          opacity: 0;
-        }
-        100% {
-          margin-top: 0;
-          opacity: 1;
+        .btn {
+          border-color: var(--black) !important;
         }
       }
     }
+  }
+  &.sticking {
+    position: fixed;
+    animation: menu_sticky 0.5s;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+    background-color: var(--white);
+    z-index: 1000;
+    .main-menu {
+      li > a {
+        color: var(--black);
+      }
+    }
+    .header-actions {
+      li {
+        &::after {
+          border-color: var(--black) !important;
+        }
+        & > a {
+          color: var(--black);
+        }
+        .btn {
+          border-color: var(--black);
+        }
+      }
+    }
+    @keyframes menu_sticky {
+      0% {
+        margin-top: -120px;
+        opacity: 0;
+      }
+      50% {
+        margin-top: -64px;
+        opacity: 0;
+      }
+      100% {
+        margin-top: 0;
+        opacity: 1;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
   }
   &_wrapper {
     display: flex;
@@ -112,8 +127,8 @@
           @include media-lg {
             display: none;
           }
-          .btn{
-            &:hover{
+          .btn {
+            &:hover {
               color: var(--black);
             }
           }
