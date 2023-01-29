@@ -86,7 +86,7 @@ gulp.task("scripts", () => {
     .src(paths.js)
     .pipe(concat("app.js"))
     .pipe(rollup({ plugins: [babel(), resolve(), commonjs()] }, "umd"))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest(outputDir + "assets/js/"))
     .pipe(notify("Script Task Done"));

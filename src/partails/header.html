@@ -6,7 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@@title</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="@@webRoot/assets/images/favicon.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="@@webRoot/assets/css/app.min.css" />
+
+
 </head>
 
 <body class="@@class">
@@ -28,38 +34,37 @@
     <header id="header" class="header">
       <div class="container">
         <div class="header_wrapper">
-          <div class="header_wrapper-left">
-            <div class="logo">
+          <div class="logo">
+            <a href="@@webRoot/index.html">
               <img src="@@webRoot/assets/images/logo.png" alt="logo">
-            </div>
-            <nav class="main-menu">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
-              </ul>
-            </nav>
+            </a>
           </div>
-          <div class="header_wrapper-right">
-            <div class="header-actions">
-              <ul>
-                <li class="menu">
-                  <a href="javascript: voild(0);" data-toggle="menu" data-target="#menu-main">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path
-                        d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" />
-                    </svg>
-                  </a>
-                </li>
-                <li class="">
-                  <a href="#" class="btn btn-primary">Add</a>
-                </li>
-              </ul>
-            </div>
+          <nav class="main-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </nav>
+          <div class="header-actions">
+            <ul>
+              <li class="auth">
+                <a href="#" data-toggle="modal" data-target="#modal-login">Signin</a>
+              </li>
+              <li class="menu">
+                <a href="javascript: voild(0);" data-toggle="menu" data-target="#menu-main">
+                  <i class="far fa-bars"></i>
+                </a>
+              </li>
+              <li class="add-list">
+                <a href="#" class="btn btn-outline-light btn-lg"><i class="fal fa-home me-2"></i> Add listing</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </header>
 
     @@include('./layout/menu-mobile.html')
+    @@include('./modal/auth.html')

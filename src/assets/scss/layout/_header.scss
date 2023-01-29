@@ -1,13 +1,10 @@
 .header {
-  position: relative;
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;
   width: 100%;
-  z-index: 99;
-  background-color: var(--white);
   z-index: 999;
-  box-shadow: 0px 2px 2px #0000001a;
   @include media-md {
     position: fixed;
   }
@@ -18,6 +15,24 @@
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
       background-color: var(--white);
       z-index: 1000;
+      .main-menu {
+        li > a {
+          color: var(--black);
+        }
+      }
+      .header-actions {
+        li {
+          &::after{
+            border-color: var(--black)!important;
+          }
+         & > a {
+          color: var(--black);
+        }
+        .btn{
+            border-color: var(--black);
+        }
+        }
+      }
       @keyframes menu_sticky {
         0% {
           margin-top: -120px;
@@ -32,39 +47,6 @@
           opacity: 1;
         }
       }
-      .header_wrapper {
-        &-left {
-          .logo {
-            max-width: 120px;
-          }
-        }
-      }
-    }
-  }
-  &.dark {
-    .main-menu {
-      ul {
-        li {
-          a {
-            color: var(--black);
-          }
-        }
-      }
-    }
-    @media screen and (min-width: 768px) {
-      .header-actions {
-        ul {
-          li {
-            svg {
-              width: 20px;
-              fill: var(--black);
-            }
-            a {
-              color: var(--black);
-            }
-          }
-        }
-      }
     }
   }
   &_wrapper {
@@ -72,28 +54,21 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 12px 0;
-    &-left {
-      flex-grow: 1;
-      display: flex;
-      align-items: center;
-      .logo {
-        max-width: 180px;
-        @include media-sm {
-          flex: 0 0 100px;
-        }
-        width: 100%;
+    padding: 25px 0;
+    .logo {
+      max-width: 180px;
+      width: 100%;
+      img {
+        max-height: 40px;
       }
-    }
-    &-right {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
+      @include media-sm {
+        flex: 0 0 100px;
+      }
     }
   }
   .main-menu {
     margin-left: 45px;
-    @include media-md {
+    @include media-lg {
       display: none;
     }
     ul {
@@ -108,32 +83,49 @@
   .header-actions {
     ul {
       line-height: 1;
+      display: flex;
+      align-items: center;
       li {
         display: inline-block;
+        position: relative;
         &:not(:first-child) {
-          margin-left: 25px;
+          margin-left: 40px;
+          &::after {
+            position: absolute;
+            content: "";
+            border-right: 1px solid var(--white);
+            left: -20px;
+            top: 50%;
+            bottom: 0;
+            height: 24px;
+            transform: translateY(-50%);
+          }
         }
-        svg {
-          width: 20px;
+        &.menu {
+          display: none;
+          @include media-lg {
+            display: block;
+          }
         }
-        .text {
-          margin-left: 10px;
+        &.add-list {
+          display: block;
+          @include media-lg {
+            display: none;
+          }
+          .btn{
+            &:hover{
+              color: var(--black);
+            }
+          }
         }
         a {
           display: flex;
           align-items: center;
           position: relative;
-          > .cart-contents,
-          > .yith-wcwl-items-count {
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            display: inline-block;
-            padding: 2px 5px;
-            border-radius: 25px;
-            font-size: 10px;
-            background-color: var(--primary);
-            color: var(--white);
+          color: var(--white);
+          font-size: 1rem;
+          i {
+            font-size: 20px;
           }
         }
       }

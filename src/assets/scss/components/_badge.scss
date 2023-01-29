@@ -1,0 +1,10 @@
+.badge {
+  --bs-badge-padding-x: 0.75rem;
+  --bs-badge-padding-y: 0.4375rem;
+  --bs-badge-font-size: 0.8em;
+  --bs-badge-font-weight: 600;
+  border-radius: 0.25rem;
+}
+.text-bg-primary {
+  background-color: var(--primary)!important;
+}

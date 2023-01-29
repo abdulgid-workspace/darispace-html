@@ -6,7 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="./assets/css/app.min.css" />
+
+
 </head>
 
 <body class="page_404">
@@ -28,35 +34,33 @@
     <header id="header" class="header">
       <div class="container">
         <div class="header_wrapper">
-          <div class="header_wrapper-left">
-            <div class="logo">
+          <div class="logo">
+            <a href="./index.html">
               <img src="./assets/images/logo.png" alt="logo">
-            </div>
-            <nav class="main-menu">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
-              </ul>
-            </nav>
+            </a>
           </div>
-          <div class="header_wrapper-right">
-            <div class="header-actions">
-              <ul>
-                <li class="menu">
-                  <a href="javascript: voild(0);" data-toggle="menu" data-target="#menu-main">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path
-                        d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" />
-                    </svg>
-                  </a>
-                </li>
-                <li class="">
-                  <a href="#" class="btn btn-primary">Add</a>
-                </li>
-              </ul>
-            </div>
+          <nav class="main-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </nav>
+          <div class="header-actions">
+            <ul>
+              <li class="auth">
+                <a href="#" data-toggle="modal" data-target="#modal-login">Signin</a>
+              </li>
+              <li class="menu">
+                <a href="javascript: voild(0);" data-toggle="menu" data-target="#menu-main">
+                  <i class="far fa-bars"></i>
+                </a>
+              </li>
+              <li class="add-list">
+                <a href="#" class="btn btn-outline-light btn-lg"><i class="fal fa-home me-2"></i> Add listing</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -89,6 +93,105 @@
   </div>
 </aside>
 <!-- End App Menu -->
+    <div id="modal-login" class="app-modal-login app-modal">
+  <div class="app-modal-container">
+    <button type="button" class="app-modal-close" data-dismiss="modal" aria-label="close">
+      <i class="fal fa-times"></i>
+    </button>
+    <div class="app-modal-wrap">
+      <div class="app-modal-head">
+        <div class="app-modal-logo">
+          <a href="#" class="home-link">
+            <img class="logo-app" src="./assets/images/logo.png" alt="logo" width="150">
+          </a>
+        </div>
+      </div>
+      <div class="auth-form login-auth-form">
+        <div class="app-modal-wrapper">
+          <h4>Login</h4>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Email address</label>
+              <input type="email" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="d-flex mb-3">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" for="remmber">
+                <label class="form-check-label" id="remmber"> Remmber me</label>
+              </div>
+              <a href="#" class="d-inline-block ms-auto" data-form="lostpassword">Forget password?</a>
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="button">Login</button>
+            </div>
+          </form>
+        </div>
+        <div class="app-modal-footer">
+          <div class="or">
+            <hr><span>Or</span>
+          </div>
+          <p>Don't have any account?<a href="#" data-form="register">Register</a></p>
+        </div>
+      </div>
+      <div class="auth-form register-auth-form">
+        <div class="app-modal-wrapper">
+          <h4>Register</h4>
+          <form>
+            <div class="mb-3">
+              <labe class="form-label">Username</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+              <labe class="form-label">Email address</label>
+                <input type="email" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Confirm Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="button">Register</button>
+            </div>
+          </form>
+        </div>
+        <div class="app-modal-footer">
+          <div class="or">
+            <hr><span>Or</span>
+          </div>
+          <p>Already have an account?<a href="#" data-form="login">Login</a></p>
+        </div>
+      </div>
+      <div class="auth-form lostpassword-auth-form">
+        <div class="app-modal-wrapper">
+          <h4>Lost Password</h4>
+          <form>
+            <div class="mb-3">
+              <labe class="form-label">Email address</label>
+                <input type="email" class="form-control">
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="button">Rest Password</button>
+            </div>
+          </form>
+        </div>
+        <div class="app-modal-footer">
+          <div class="or">
+            <hr><span>Or</span>
+          </div>
+          <p>Back<a href="#" data-form="login">Login</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <main class="app_main">
   <div class="content_404">
@@ -127,7 +230,9 @@
   </div>
 </footer>
 
-</div>
+</div> 
+<!-- <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+
 <script src="./assets/js/app.min.js"></script>
 </body>
 

@@ -1,6 +1,7 @@
 // Import Vendors
 import $ from "jquery";
-
+// import * as Popper from "@popperjs/core";
+// import * as bootstrap from "bootstrap";
 // // Import Vendors
 // import SwiperCore, {
 //   Swiper,
@@ -18,12 +19,12 @@ import $ from "jquery";
 
 window.$ = $;
 window.jQuery = $;
-
+// window.Popper = Popper;
+// window.bootstrap = bootstrap;
 
 /* ------------------------------------------------------------------------- *
  * INIT COMPONENTS
  * ------------------------------------------------------------------------- */
-
 (function ($) {
   function appScript() {
     var rtlPage =
@@ -165,7 +166,7 @@ window.jQuery = $;
       // Close Modal
       $("[data-dismiss='modal']").on("click", function (e) {
         e.preventDefault();
-        var getModal = $(this).parents(".modal");
+        var getModal = $(this).parents(".app-modal");
         getModal.fadeOut();
         getModal.removeClass("opened");
         getModal.find("iframe").attr("src", "");
@@ -173,12 +174,12 @@ window.jQuery = $;
 
       $("[data-dismiss='form']").on("submit", function (e) {
         // e.preventDefault();
-        var getModal = $(this).parents(".modal");
+        var getModal = $(this).parents(".app-modal");
         getModal.fadeOut();
         getModal.removeClass("opened");
       });
 
-      $(".modal").on("click", function (e) {
+      $(".app-modal").on("click", function (e) {
         e.preventDefault();
         $(this).fadeOut();
         $(this).removeClass("opened");
@@ -187,36 +188,30 @@ window.jQuery = $;
 
       $(document).on("keydown", function (e) {
         if (e.keyCode == 27) {
-          $(".modal").fadeOut();
-          $(".modal").removeClass("opened");
-
-          // $(dataTarget + " iframe").attr("src", "");
+          $(".app-modal").fadeOut();
+          $(".app-modal").removeClass("opened");
         }
       });
-      // Stop Propagation Modal Offcanvas
-      $(".modal .modal-container").on("click", function (e) {
+      // Stop Propagation app-modal Offcanvas
+      $(".app-modal .app-modal-container").on("click", function (e) {
         e.stopPropagation();
       });
     })();
-
-    // Tabs
     (function () {
-      $(".app-tabs .app-content").hide();
-      $(".app-tabs .app-content:first").show();
-      $(".app-tabs .app-tabs-head li:first").addClass("active");
-      $(".app-tabs .app-tabs-head li a").click(function (e) {
+      $("[data-form]").on("click", function (e) {
         e.preventDefault();
+        var thisELe = $(this).data("form");
+        $(this).parents(".app-modal-container").find(".auth-form").hide();
+        $(this)
+          .parents(".app-modal-container")
+          .find("." + thisELe + "-auth-form")
+          .show();
       });
-      $(".app-tabs .app-tabs-head li").click(function () {
-        $(".app-tabs .app-tabs-head li").removeClass("active");
-        $(this).addClass("active");
-        $(".app-tabs .app-content").hide();
-        var selectTab = $(this).find("a").attr("href");
-        $(selectTab).fadeIn();
-      });
-    })(); 
+    })();
   }
   $(function () {
     appScript();
   });
 })(jQuery);
+
+ 

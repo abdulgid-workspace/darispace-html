@@ -24,13 +24,16 @@
           }
         }
         &.current_page_item {
-          >a{
-              color: var(--primary);
+          > a {
+            color: var(--primary);
           }
         }
         a {
-          font-size: 1.25rem;
-          &:hover{
+          font-size: 0.875rem;
+          font-weight: 500;
+          color: var(--white);
+
+          &:hover {
             color: var(--primary);
           }
         }
@@ -45,7 +48,7 @@
           border-radius: 5px;
           margin-top: 25px;
           min-width: 200px;
-            font-size: .8em;
+          font-size: 0.8em;
           opacity: 0;
           visibility: hidden;
           transition: all 0.3s ease-in-out 0.2s;
@@ -77,8 +80,9 @@
       &.menu-item-has-children,
       &.current-menu-parent {
         & > a:after {
-          content: "+";
-          font-weight: 400;
+          content: "\f107";
+          font-family: "font awesome 5 pro";
+          font-weight: 300;
           font-size: 1.625rem;
           position: absolute;
           right: 0;
@@ -107,7 +111,7 @@
     > li {
       a {
         font-weight: 600;
-        font-size: 0.875rem;
+        font-size: 14px;
         line-height: 1.25rem;
         padding: 0.75rem 0;
         text-decoration: none;
@@ -115,6 +119,7 @@
         text-decoration: none;
         align-items: center;
         position: relative;
+        // color: var(--white);
         &:hover {
           color: var(--primary);
         }

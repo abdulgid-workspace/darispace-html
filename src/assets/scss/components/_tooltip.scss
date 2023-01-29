@@ -20,26 +20,26 @@
   }
   &:after {
     z-index: 1000;
-    padding: 8px 10px;
+    padding: 0.5rem 0.625rem;
     color: #fff;
-    background-color:var(--secondary);
+    background-color: var(--black);
     content: attr(data-tooltip);
-    font-size: 14px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
     text-align: center;
-    border-radius: 5px;
-    letter-spacing: 1px; 
-        max-width: 110px;
-    min-width: 105px;
+    border-radius: 0.3125rem;
+    letter-spacing: 0.0625rem;
+    max-width: 6.875rem;
+    min-width: 6.5625rem;
   }
   &:before {
-    margin-bottom: -12px;
-    border: 6px solid transparent;
-    border-top-color:var(--secondary);
+    margin-bottom: -0.75rem;
+    border: 0.375rem solid transparent;
+    border-top-color: var(--black);
   }
   &:hover:after,
   &:hover:before {
-    transform: translateY(-12px) translateX(-50%);
+    transform: translateY(-0.75rem) translateX(-50%);
     visibility: visible;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(Opacity=100);

@@ -1,17 +1,1 @@
-.social-icons {
-  li {
-    display: inline-block;
-    &:not(:last-child) {
-      margin-right: 15px;
-    }
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      svg {
-        width: 25px;
-        height: 25px;
-      }
-    }
-  }
-}
+ 
