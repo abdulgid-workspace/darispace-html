@@ -68,18 +68,22 @@ gulp.task("sass", () => {
       .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
       .pipe(autoprefixer("last 2 versions"))
       .pipe(concat("app.css"))
-      .pipe(rename({ suffix: ".min" }))
-      // .pipe(sourcemaps.write())
-      .pipe(gulp.dest(outputDir + "assets/css/"))
-      .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-      .pipe(autoprefixer("last 2 versions"))
-      .pipe(concat("app.css"))
-      .pipe(rtlcss())
-      .pipe(rename({ suffix: "-rtl" }))
-      .pipe(rename({ suffix: ".min" }))
-      // .pipe(sourcemaps.write())
-      .pipe(gulp.dest(outputDir + "assets/css/"))
+      .pipe(rename({ suffix: ".min" })) 
+      .pipe(gulp.dest(outputDir + "assets/css/")) 
       .pipe(notify("Sass Task Done"))
+});
+
+// Sass Task
+gulp.task("rtl", () => {
+  return gulp
+    .src(paths.sass)
+    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(autoprefixer("last 2 versions"))
+    .pipe(concat("app.css"))
+    .pipe(rtlcss())
+    .pipe(rename({ suffix: "-rtl.min" }))
+    .pipe(gulp.dest(outputDir + "assets/css/"))
+    .pipe(notify("Sass Task Done"));
 });
 
 // Fonts Task
@@ -130,7 +134,8 @@ function reloadBrowserSync(done) {
 function watchFiles() {
   gulp.watch(paths.html, gulp.series("html", reloadBrowserSync));
   gulp.watch(paths.sass, gulp.series("sass", reloadBrowserSync));
-  gulp.watch(paths.js, gulp.series("scripts", reloadBrowserSync));
+  gulp.watch(paths.sass, gulp.series("rtl", reloadBrowserSync)); 
+  gulp.watch(paths.js, gulp.series("scripts", reloadBrowserSync)); 
   gulp.watch(paths.fonts, gulp.series("fonts", reloadBrowserSync));
   gulp.watch(paths.images, gulp.series("images", reloadBrowserSync));
 }
@@ -140,5 +145,5 @@ gulp.task("watch", gulp.parallel(watchFiles, browserSync));
 
 gulp.task(
   "build",
-  gulp.series("html", "sass", "scripts", "fonts", "images", "watch")
+  gulp.series("html", "sass", "rtl", "scripts", "fonts", "images", "watch")
 );

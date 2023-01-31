@@ -1,45 +1,4 @@
-.hero-page {
-  margin-bottom: 50px;
-  @include media-md {
-    margin-bottom: 20px;
-  }
-  &__bg {
-    @include overlay;
-    z-index: 1;
-  }
-  &__content {
-    position: relative;
-    z-index: 2;
-    padding: 100px 0 80px;
-  }
-  &__wrapper {
-    position: relative;
-    .title {
-      color: #fff;
-      @include media-md {
-        font-size: 40px !important;
-      }
-      position: relative;
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   left: 0;
-      //   bottom: -50px;
-      //   width: 174px;
-      //   height: 6px;
-      //   background-color: var(--secondary);
-      //   @include media-md {
-      //   width: 100px;
-
-      //     bottom: -15px;
-      //   }
-      // }
-    }
-  }
-  .breadcrumb {
-    // padding-top: 18px;
-    .active {
-      color: var(--secondary);
-    }
-  }
+.hero-page { 
+  position: relative;
+  z-index: 99;
 }

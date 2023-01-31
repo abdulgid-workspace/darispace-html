@@ -1,1 +1,23 @@
- 
+.single-blog {
+  &-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include media-md {
+      flex-direction: column;
+      .center {
+        margin: 10px 0;
+      }
+    }
+    .center {
+      padding: 0 25px;
+    }
+    a {
+      color: var(--dark);
+      font-size: 1rem;
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+}

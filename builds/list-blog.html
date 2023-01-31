@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listing Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/app.min.css" />
+
+
+</head>
+
+<body class="">
+
+  <!-- preloader -->
+  <!-- <div class="preloader">
+    <div class="preloader-bg"></div>
+    <div class="preloader-body">
+      <div class="loading">
+        <div class="percent"><span class="preloader-number" data-count="101">00</span><span>%</span></div>
+      </div>
+      <div class="loading-bar">
+        <div class="bar"></div>
+      </div>
+    </div>
+  </div>
+  <div class="load"></div> -->
+  <div class="wrapper">
+    <header id="header" class="header ">
+      <div class="container">
+        <div class="header_wrapper">
+          <div class="logo">
+            <a href="./index.html">
+              <img src="./assets/images/logo.png" alt="logo">
+            </a>
+          </div>
+          <nav class="main-menu">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./list-properties.html">Properties</a></li> 
+              <li><a href="./list-cities.html">Cities</a></li>
+              <li><a href="./list-blog.html">Blog</a></li>
+              <li><a href="./about.html">About us</a></li>
+              <li><a href="./contact.html">Contact us</a></li>
+            </ul>
+          </nav>
+          <div class="header-actions">
+            <ul>
+              <li class="auth">
+                <a href="#" data-toggle="modal" data-target="#modal-login">Signin</a>
+              </li>
+              <li class="menu">
+                <a href="javascript: voild(0);" data-toggle="menu" data-target="#menu-main">
+                  <i class="far fa-bars"></i>
+                </a>
+              </li>
+              <li class="add-list">
+                <a href="#" class="btn  btn-accent btn-lg"><i class="fal fa-home me-2"></i> Add listing</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Start App Menu -->
+<aside id="menu-main" class="app-menu">
+  <div class="app-menu__offcanvas">
+    <div class="app-menu__container">
+      <div class="app-menu__header">
+        <div class="header-logo">
+          <h2>Menu</h2>
+        </div>
+        <div class="close-menu" data-dismiss="menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path
+            d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z" />
+        </svg></div>
+      </div>
+      <div class="app-menu__inner">
+        <nav class="main-menu-vr">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./list-properties.html">Properties</a></li>
+            <li><a href="./list-cities.html">Cities</a></li>
+            <li><a href="./list-blog.html">Blog</a></li>
+            <li><a href="./about.html">About us</a></li>
+            <li><a href="./contact.html">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</aside>
+<!-- End App Menu -->
+    <div id="modal-login" class="app-modal-login app-modal">
+  <div class="app-modal-container">
+    <button type="button" class="app-modal-close" data-dismiss="modal" aria-label="close">
+      <i class="fal fa-times"></i>
+    </button>
+    <div class="app-modal-wrap">
+      <div class="app-modal-head">
+        <div class="app-modal-logo">
+          <a href="#" class="home-link">
+            <img class="logo-app" src="./assets/images/logo.png" alt="logo" width="150">
+          </a>
+        </div>
+      </div>
+      <div class="auth-form login-auth-form">
+        <div class="app-modal-wrapper">
+          <h4>Login</h4>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Email address</label>
+              <input type="email" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="d-flex mb-3">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" for="remmber">
+                <label class="form-check-label" id="remmber"> Remmber me</label>
+              </div>
+              <a href="#" class="d-inline-block ms-auto" data-form="lostpassword">Forget password?</a>
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="button">Login</button>
+            </div>
+          </form>
+        </div>
+        <div class="app-modal-footer">
+          <div class="or">
+            <hr><span>Or</span>
+          </div>
+          <p>Don't have any account?<a href="#" data-form="register">Register</a></p>
+        </div>
+      </div>
+      <div class="auth-form register-auth-form">
+        <div class="app-modal-wrapper">
+          <h4>Register</h4>
+          <form>
+            <div class="mb-3">
+              <labe class="form-label">Username</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+              <labe class="form-label">Email address</label>
+                <input type="email" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Confirm Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="button">Register</button>
+            </div>
+          </form>
+        </div>
+        <div class="app-modal-footer">
+          <div class="or">
+            <hr><span>Or</span>
+          </div>
+          <p>Already have an account?<a href="#" data-form="login">Login</a></p>
+        </div>
+      </div>
+      <div class="auth-form lostpassword-auth-form">
+        <div class="app-modal-wrapper">
+          <h4>Lost Password</h4>
+          <form>
+            <div class="mb-3">
+              <labe class="form-label">Email address</label>
+                <input type="email" class="form-control">
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="button">Rest Password</button>
+            </div>
+          </form>
+        </div>
+        <div class="app-modal-footer">
+          <div class="or">
+            <hr><span>Or</span>
+          </div>
+          <p>Back<a href="#" data-form="login">Login</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<main class="app-main listing-property">
+  <div class="main-content">
+    <div class="hero-page py-4">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb py-2 mb-0">
+        <li class="breadcrumb-item">
+          <a href="./index.html">Home</a>
+        </li> 
+        <li class="breadcrumb-item active">Listing Blog</li>
+      </ol>
+    </nav>
+    <h1 class="h2">Listing Blog</h1>
+  </div>
+</div>
+    <section class="bg-color-gray py-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3  row-cols-lg-4 g-4 ">
+          <article class="blog-box">
+  <div class="blog-box_wrap">
+    <div class="blog-box_image">
+      <a href="./single-blog.html">
+        <img src="./assets/images/post-03.jpg" alt="blog">
+      </a>
+    </div>
+    <div class="blog-box_body">
+      <ul>
+        <li><i class="fas fa-calendar-alt"></i>30th Dec, 2020</li>
+        <li><i class="fas fa-eye"></i>154 views</li>
+      </ul>
+      <h5><a href="./single-blog.html">Retail banks wake up to digital lending this year</a></h5>
+      <p>Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis leo sit met condim entum,
+        consecte tur cineoi</p>
+      <a href="./single-blog.html" class="btn btn-accent">Read more <i class="far fa-long-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</article>
+          <article class="blog-box">
+  <div class="blog-box_wrap">
+    <div class="blog-box_image">
+      <a href="./single-blog.html">
+        <img src="./assets/images/post-03.jpg" alt="blog">
+      </a>
+    </div>
+    <div class="blog-box_body">
+      <ul>
+        <li><i class="fas fa-calendar-alt"></i>30th Dec, 2020</li>
+        <li><i class="fas fa-eye"></i>154 views</li>
+      </ul>
+      <h5><a href="./single-blog.html">Retail banks wake up to digital lending this year</a></h5>
+      <p>Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis leo sit met condim entum,
+        consecte tur cineoi</p>
+      <a href="./single-blog.html" class="btn btn-accent">Read more <i class="far fa-long-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</article>
+          <article class="blog-box">
+  <div class="blog-box_wrap">
+    <div class="blog-box_image">
+      <a href="./single-blog.html">
+        <img src="./assets/images/post-03.jpg" alt="blog">
+      </a>
+    </div>
+    <div class="blog-box_body">
+      <ul>
+        <li><i class="fas fa-calendar-alt"></i>30th Dec, 2020</li>
+        <li><i class="fas fa-eye"></i>154 views</li>
+      </ul>
+      <h5><a href="./single-blog.html">Retail banks wake up to digital lending this year</a></h5>
+      <p>Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis leo sit met condim entum,
+        consecte tur cineoi</p>
+      <a href="./single-blog.html" class="btn btn-accent">Read more <i class="far fa-long-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</article>
+          <article class="blog-box">
+  <div class="blog-box_wrap">
+    <div class="blog-box_image">
+      <a href="./single-blog.html">
+        <img src="./assets/images/post-03.jpg" alt="blog">
+      </a>
+    </div>
+    <div class="blog-box_body">
+      <ul>
+        <li><i class="fas fa-calendar-alt"></i>30th Dec, 2020</li>
+        <li><i class="fas fa-eye"></i>154 views</li>
+      </ul>
+      <h5><a href="./single-blog.html">Retail banks wake up to digital lending this year</a></h5>
+      <p>Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis leo sit met condim entum,
+        consecte tur cineoi</p>
+      <a href="./single-blog.html" class="btn btn-accent">Read more <i class="far fa-long-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</article>
+          <article class="blog-box">
+  <div class="blog-box_wrap">
+    <div class="blog-box_image">
+      <a href="./single-blog.html">
+        <img src="./assets/images/post-03.jpg" alt="blog">
+      </a>
+    </div>
+    <div class="blog-box_body">
+      <ul>
+        <li><i class="fas fa-calendar-alt"></i>30th Dec, 2020</li>
+        <li><i class="fas fa-eye"></i>154 views</li>
+      </ul>
+      <h5><a href="./single-blog.html">Retail banks wake up to digital lending this year</a></h5>
+      <p>Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis leo sit met condim entum,
+        consecte tur cineoi</p>
+      <a href="./single-blog.html" class="btn btn-accent">Read more <i class="far fa-long-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</article>
+          <article class="blog-box">
+  <div class="blog-box_wrap">
+    <div class="blog-box_image">
+      <a href="./single-blog.html">
+        <img src="./assets/images/post-03.jpg" alt="blog">
+      </a>
+    </div>
+    <div class="blog-box_body">
+      <ul>
+        <li><i class="fas fa-calendar-alt"></i>30th Dec, 2020</li>
+        <li><i class="fas fa-eye"></i>154 views</li>
+      </ul>
+      <h5><a href="./single-blog.html">Retail banks wake up to digital lending this year</a></h5>
+      <p>Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis leo sit met condim entum,
+        consecte tur cineoi</p>
+      <a href="./single-blog.html" class="btn btn-accent">Read more <i class="far fa-long-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</article>
+          <article class="blog-box">
+  <div class="blog-box_wrap">
+    <div class="blog-box_image">
+      <a href="./single-blog.html">
+        <img src="./assets/images/post-03.jpg" alt="blog">
+      </a>
+    </div>
+    <div class="blog-box_body">
+      <ul>
+        <li><i class="fas fa-calendar-alt"></i>30th Dec, 2020</li>
+        <li><i class="fas fa-eye"></i>154 views</li>
+      </ul>
+      <h5><a href="./single-blog.html">Retail banks wake up to digital lending this year</a></h5>
+      <p>Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis leo sit met condim entum,
+        consecte tur cineoi</p>
+      <a href="./single-blog.html" class="btn btn-accent">Read more <i class="far fa-long-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</article>
+          <article class="blog-box">
+  <div class="blog-box_wrap">
+    <div class="blog-box_image">
+      <a href="./single-blog.html">
+        <img src="./assets/images/post-03.jpg" alt="blog">
+      </a>
+    </div>
+    <div class="blog-box_body">
+      <ul>
+        <li><i class="fas fa-calendar-alt"></i>30th Dec, 2020</li>
+        <li><i class="fas fa-eye"></i>154 views</li>
+      </ul>
+      <h5><a href="./single-blog.html">Retail banks wake up to digital lending this year</a></h5>
+      <p>Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis leo sit met condim entum,
+        consecte tur cineoi</p>
+      <a href="./single-blog.html" class="btn btn-accent">Read more <i class="far fa-long-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</article>
+          <article class="blog-box">
+  <div class="blog-box_wrap">
+    <div class="blog-box_image">
+      <a href="./single-blog.html">
+        <img src="./assets/images/post-03.jpg" alt="blog">
+      </a>
+    </div>
+    <div class="blog-box_body">
+      <ul>
+        <li><i class="fas fa-calendar-alt"></i>30th Dec, 2020</li>
+        <li><i class="fas fa-eye"></i>154 views</li>
+      </ul>
+      <h5><a href="./single-blog.html">Retail banks wake up to digital lending this year</a></h5>
+      <p>Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis leo sit met condim entum,
+        consecte tur cineoi</p>
+      <a href="./single-blog.html" class="btn btn-accent">Read more <i class="far fa-long-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</article>
+          <article class="blog-box">
+  <div class="blog-box_wrap">
+    <div class="blog-box_image">
+      <a href="./single-blog.html">
+        <img src="./assets/images/post-03.jpg" alt="blog">
+      </a>
+    </div>
+    <div class="blog-box_body">
+      <ul>
+        <li><i class="fas fa-calendar-alt"></i>30th Dec, 2020</li>
+        <li><i class="fas fa-eye"></i>154 views</li>
+      </ul>
+      <h5><a href="./single-blog.html">Retail banks wake up to digital lending this year</a></h5>
+      <p>Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis leo sit met condim entum,
+        consecte tur cineoi</p>
+      <a href="./single-blog.html" class="btn btn-accent">Read more <i class="far fa-long-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</article>
+          <article class="blog-box">
+  <div class="blog-box_wrap">
+    <div class="blog-box_image">
+      <a href="./single-blog.html">
+        <img src="./assets/images/post-03.jpg" alt="blog">
+      </a>
+    </div>
+    <div class="blog-box_body">
+      <ul>
+        <li><i class="fas fa-calendar-alt"></i>30th Dec, 2020</li>
+        <li><i class="fas fa-eye"></i>154 views</li>
+      </ul>
+      <h5><a href="./single-blog.html">Retail banks wake up to digital lending this year</a></h5>
+      <p>Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis leo sit met condim entum,
+        consecte tur cineoi</p>
+      <a href="./single-blog.html" class="btn btn-accent">Read more <i class="far fa-long-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</article>
+          <article class="blog-box">
+  <div class="blog-box_wrap">
+    <div class="blog-box_image">
+      <a href="./single-blog.html">
+        <img src="./assets/images/post-03.jpg" alt="blog">
+      </a>
+    </div>
+    <div class="blog-box_body">
+      <ul>
+        <li><i class="fas fa-calendar-alt"></i>30th Dec, 2020</li>
+        <li><i class="fas fa-eye"></i>154 views</li>
+      </ul>
+      <h5><a href="./single-blog.html">Retail banks wake up to digital lending this year</a></h5>
+      <p>Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis leo sit met condim entum,
+        consecte tur cineoi</p>
+      <a href="./single-blog.html" class="btn btn-accent">Read more <i class="far fa-long-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</article>
+        </div>
+        <nav class="mt-5">
+          <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#"><i class="fas  fa-angle-right"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer id="footer" class="footer">
+  <div class="footer_wrapper">
+    <div class="footer_top">
+      <div class="container">
+        <div class="logo">
+          <img src="./assets/images/logo.png" alt="logo">
+        </div>
+        <div class="footer-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="social-icons">
+          <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fab fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer_copyright">
+        <p>
+          <script>
+            var dateNow = new Date(),
+              year = dateNow.getFullYear();
+            document.write("Copyright &copy; " + year + ' Darispace.')
+          </script>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+<!-- <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+
+<script src="./assets/js/app.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/app.min.css" />
+
+
+</head>
+
+<body class="">
+
+  <!-- preloader -->
+  <!-- <div class="preloader">
+    <div class="preloader-bg"></div>
+    <div class="preloader-body">
+      <div class="loading">
+        <div class="percent"><span class="preloader-number" data-count="101">00</span><span>%</span></div>
+      </div>
+      <div class="loading-bar">
+        <div class="bar"></div>
+      </div>
+    </div>
+  </div>
+  <div class="load"></div> -->
+  <div class="wrapper">
+    <header id="header" class="header ">
+      <div class="container">
+        <div class="header_wrapper">
+          <div class="logo">
+            <a href="./index.html">
+              <img src="./assets/images/logo.png" alt="logo">
+            </a>
+          </div>
+          <nav class="main-menu">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./list-properties.html">Properties</a></li> 
+              <li><a href="./list-cities.html">Cities</a></li>
+              <li><a href="./list-blog.html">Blog</a></li>
+              <li><a href="./about.html">About us</a></li>
+              <li><a href="./contact.html">Contact us</a></li>
+            </ul>
+          </nav>
+          <div class="header-actions">
+            <ul>
+              <li class="auth">
+                <a href="#" data-toggle="modal" data-target="#modal-login">Signin</a>
+              </li>
+              <li class="menu">
+                <a href="javascript: voild(0);" data-toggle="menu" data-target="#menu-main">
+                  <i class="far fa-bars"></i>
+                </a>
+              </li>
+              <li class="add-list">
+                <a href="#" class="btn  btn-accent btn-lg"><i class="fal fa-home me-2"></i> Add listing</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Start App Menu -->
+<aside id="menu-main" class="app-menu">
+  <div class="app-menu__offcanvas">
+    <div class="app-menu__container">
+      <div class="app-menu__header">
+        <div class="header-logo">
+          <h2>Menu</h2>
+        </div>
+        <div class="close-menu" data-dismiss="menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path
+            d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z" />
+        </svg></div>
+      </div>
+      <div class="app-menu__inner">
+        <nav class="main-menu-vr">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./list-properties.html">Properties</a></li>
+            <li><a href="./list-cities.html">Cities</a></li>
+            <li><a href="./list-blog.html">Blog</a></li>
+            <li><a href="./about.html">About us</a></li>
+            <li><a href="./contact.html">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</aside>
+<!-- End App Menu -->
+    <div id="modal-login" class="app-modal-login app-modal">
+  <div class="app-modal-container">
+    <button type="button" class="app-modal-close" data-dismiss="modal" aria-label="close">
+      <i class="fal fa-times"></i>
+    </button>
+    <div class="app-modal-wrap">
+      <div class="app-modal-head">
+        <div class="app-modal-logo">
+          <a href="#" class="home-link">
+            <img class="logo-app" src="./assets/images/logo.png" alt="logo" width="150">
+          </a>
+        </div>
+      </div>
+      <div class="auth-form login-auth-form">
+        <div class="app-modal-wrapper">
+          <h4>Login</h4>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Email address</label>
+              <input type="email" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="d-flex mb-3">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" for="remmber">
+                <label class="form-check-label" id="remmber"> Remmber me</label>
+              </div>
+              <a href="#" class="d-inline-block ms-auto" data-form="lostpassword">Forget password?</a>
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="button">Login</button>
+            </div>
+          </form>
+        </div>
+        <div class="app-modal-footer">
+          <div class="or">
+            <hr><span>Or</span>
+          </div>
+          <p>Don't have any account?<a href="#" data-form="register">Register</a></p>
+        </div>
+      </div>
+      <div class="auth-form register-auth-form">
+        <div class="app-modal-wrapper">
+          <h4>Register</h4>
+          <form>
+            <div class="mb-3">
+              <labe class="form-label">Username</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+              <labe class="form-label">Email address</label>
+                <input type="email" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Confirm Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="button">Register</button>
+            </div>
+          </form>
+        </div>
+        <div class="app-modal-footer">
+          <div class="or">
+            <hr><span>Or</span>
+          </div>
+          <p>Already have an account?<a href="#" data-form="login">Login</a></p>
+        </div>
+      </div>
+      <div class="auth-form lostpassword-auth-form">
+        <div class="app-modal-wrapper">
+          <h4>Lost Password</h4>
+          <form>
+            <div class="mb-3">
+              <labe class="form-label">Email address</label>
+                <input type="email" class="form-control">
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="button">Rest Password</button>
+            </div>
+          </form>
+        </div>
+        <div class="app-modal-footer">
+          <div class="or">
+            <hr><span>Or</span>
+          </div>
+          <p>Back<a href="#" data-form="login">Login</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<main class="app-main single-blog">
+  <div class="main-content">
+    <div class="hero-page py-4">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb py-2 mb-0">
+        <li class="breadcrumb-item">
+          <a href="./index.html">Home</a>
+        </li> 
+        <li class="breadcrumb-item active">Ten Benefits Of Rentals That May Change Your Perspective</li>
+      </ol>
+    </nav>
+    <h1 class="h2">Ten Benefits Of Rentals That May Change Your Perspective</h1>
+  </div>
+</div>
+    <div class="single-blog-content border-top border-bottom py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="single-blog-content">
+              <img src="./assets/images/single-blog.jpg" alt="blog">
+              <ul class="list-inline mt-4">
+                <li class="list-inline-item me-4"><img class="me-1 rounded-circle" width="30"
+                    src="./assets/images/user.jpg" alt="D. Warren"> D.
+                  Warren
+                </li>
+                <li class="list-inline-item me-4"><i class="far fa-calendar me-1"></i> 30th Dec, 2020</li>
+                <li class="list-inline-item me-4"><i class="far fa-eye me-1"></i> 149 views</li>
+              </ul>
+              <h3 class="mt-4 mb-2">
+                Ten Benefits Of Rentals That May Change Your
+                Perspective
+              </h3>
+              <div class="content mb-2">
+                <p>Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus
+                  scelerisque
+                  eleifend
+                  donec. Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae
+                  semper quis
+                  lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas
+                  sed...</p>
+                <p>
+                  GrandHome is an estate agency that
+                  helps people live in more thoughtful and
+                  beautiful ways. We believe in design as a powerful force for good.</p>
+                <p>
+                  Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend
+                  donec. Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae
+                  semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus
+                  egestas sed...
+                </p>
+                <p>
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                  id est laboruLorem ipsum dolor sit amet datat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laboruore Duis autem vel eum iriure dolor in hendvelit esse molestie
+                  consequat, est usus legentis vel illum dolore eu feugiat nulla...
+                </p>
+                <p>
+                  Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim
+                  placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis
+                </p>
+              </div>
+              <div class="single-blog-footer pb-2 mb-6 border-bottom">
+                <div class="row">
+                  <div class="col-sm-6 d-flex">
+                    <span class="d-inline-block me-2"><i class="fal fa-tags"></i></span>
+                    <ul class="list-inline">
+                      <li class="list-inline-item me-0"><a href="#">real estate,</a>
+                      </li>
+                      <li class="list-inline-item me-0"><a href="#">thememove,</a>
+                      </li>
+                      <li class="list-inline-item me-0"><a href="#">building</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6  d-flex justify-content-end justify-md-content-center">
+                    <span class="d-inline-block me-2"><i class="fal fa-share"></i></span>
+                    <ul class="list-inline">
+                      <li class="list-inline-item me-1"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                      <li class="list-inline-item me-1"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                      <li class="list-inline-item me-1"><a href="#"><i class="fab fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="single-blog-nav my-4 pb-4 border-bottom">
+                <a href="#"><i class="far fa-angle-left me-2"></i>
+                  Top Strategic Technology Trends for 2019
+                </a>
+                <a href="./list-blog.html" class="center"><i class="fas fa-th"></i></a>
+                <a href="#">
+                  Top Strategic Technology Trends for 2019<i class="ms-2 far fa-angle-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="single-blog-comments my-4">
+              <h4 class="mb-4">3 Comments on this</h4>
+              <ul>
+                <li class="comment mb-4 pb-4 border-bottom">
+                  <div class="comment_container row">
+                    <div class="comment_left col-auto">
+                      <img src="./assets/images/user.jpg" class="me-1 rounded-circle" width="60" alt="blog">
+                    </div>
+                    <div class="comment_right col">
+                      <h5 class="mb-1">Tamim anj</h5>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quam dolorem corrupti eius, vel
+                        cum quaerat sunt vitae et illo, laborum expedita neque quas voluptas recusandae nulla corporis
+                        nostrum. Nam! </p>
+                      <ul class="list-inline">
+                        <li class="list-inline-item text-muted">02 Dec 2023 at 2:40pm<span
+                            class="d-inline-block ms-2">|</span></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-accent btn-sm"><i
+                              class="far fa-reply me-1"></i>Replay</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="comment mb-4 pb-4 border-bottom">
+                  <div class="comment_container row">
+                    <div class="comment_left col-auto">
+                      <img src="./assets/images/user.jpg" class="me-1 rounded-circle" width="60" alt="blog">
+                    </div>
+                    <div class="comment_right col">
+                      <h5 class="mb-1">Tamim anj</h5>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quam dolorem corrupti eius, vel
+                        cum quaerat sunt vitae et illo, laborum expedita neque quas voluptas recusandae nulla corporis
+                        nostrum. Nam! </p>
+                      <ul class="list-inline">
+                        <li class="list-inline-item text-muted">02 Dec 2023 at 2:40pm<span
+                            class="d-inline-block ms-2">|</span></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-accent btn-sm"><i
+                              class="far fa-reply me-1"></i>Replay</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="comment mb-3 pb-4 border-bottom">
+                  <div class="comment_container row">
+                    <div class="comment_left col-auto">
+                      <img src="./assets/images/user.jpg" class="me-1 rounded-circle" width="60" alt="blog">
+                    </div>
+                    <div class="comment_right col">
+                      <h5 class="mb-1">Tamim anj</h5>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quam dolorem corrupti eius, vel
+                        cum quaerat sunt vitae et illo, laborum expedita neque quas voluptas recusandae nulla corporis
+                        nostrum. Nam! </p>
+                      <ul class="list-inline">
+                        <li class="list-inline-item text-muted">02 Dec 2023 at 2:40pm<span
+                            class="d-inline-block ms-2">|</span></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-accent btn-sm"><i
+                              class="far fa-reply me-1"></i>Replay</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="single-blog-comments">
+              <h4 class="mb-4">Leave your thought here </h4>
+              <form>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="mb-4">
+                      <input type="text" placeholder="Your Name" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mb-4">
+                      <input type="email" placeholder="Your Email" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <textarea class="form-control" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+          <aside class="mt-5 mt-lg-0 col-lg-4 ps-xl-4 single-property-sidebar">
+            <div class="card mb-4">
+              <div class="card-body">
+                <form>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <button type="submit" class="btn btn-accent"><i class="far fa-search"></i></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-body p-4">
+                <h4 class="card-title mb-3">Categories</h4>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-start px-0">
+                    <a href="./list-blog.html" class="ms-2 me-auto"> Creative</a>
+                    <span class="badge text-bg-primary rounded-pill">14</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start px-0">
+                    <a href="./list-blog.html" class="ms-2 me-auto"> Creative</a>
+                    <span class="badge text-bg-primary rounded-pill">14</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start px-0">
+                    <a href="./list-blog.html" class="ms-2 me-auto"> Creative</a>
+                    <span class="badge text-bg-primary rounded-pill">14</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start px-0">
+                    <a href="./list-blog.html" class="ms-2 me-auto"> Creative</a>
+                    <span class="badge text-bg-primary rounded-pill">14</span>
+                  </li>
+                </ul>
+              </div>
+            </div> 
+            <div class="card mb-4">
+              <div class="card-body p-4">
+                <h4 class="card-title mb-3">Popular Tags</h4>
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item mb-2">
+                    <a href="#" class="btn btn-light btn-sm">designer</a>
+                  </li>
+                  <li class="list-inline-item mb-2">
+                    <a href="#" class="btn btn-light btn-sm">mockup</a>
+                  </li>
+                  <li class="list-inline-item mb-2">
+                    <a href="#" class="btn btn-light btn-sm">template</a>
+                  </li>
+                  <li class="list-inline-item mb-2">
+                    <a href="#" class="btn btn-light btn-sm">IT
+                      Security</a>
+                  </li>
+                  <li class="list-inline-item mb-2">
+                    <a href="#" class="btn btn-light btn-sm">IT
+                      services</a>
+                  </li>
+                  <li class="list-inline-item mb-2">
+                    <a href="#" class="btn btn-light btn-sm">business</a>
+                  </li>
+                  <li class="list-inline-item mb-2">
+                    <a href="#" class="btn btn-light btn-sm">videos</a>
+                  </li>
+                  <li class="list-inline-item mb-2">
+                    <a href="#" class="btn btn-light btn-sm">wordpress
+                      theme</a>
+                  </li>
+                  <li class="list-inline-item mb-2">
+                    <a href="#" class="btn btn-light btn-sm">sketch</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer id="footer" class="footer">
+  <div class="footer_wrapper">
+    <div class="footer_top">
+      <div class="container">
+        <div class="logo">
+          <img src="./assets/images/logo.png" alt="logo">
+        </div>
+        <div class="footer-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="social-icons">
+          <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fab fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer_copyright">
+        <p>
+          <script>
+            var dateNow = new Date(),
+              year = dateNow.getFullYear();
+            document.write("Copyright &copy; " + year + ' Darispace.')
+          </script>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+<!-- <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+
+<script src="./assets/js/app.min.js"></script>
+</body>
+
+</html>

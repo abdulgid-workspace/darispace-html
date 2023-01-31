@@ -1,0 +1,35 @@
+@@include('./partails/header.html',{"title": "Listing Blog",'class':"", 'header-class':''})
+<main class="app-main listing-property">
+  <div class="main-content">
+    @@include('./partails/hero.html',{"title":"Listing Blog"})
+    <section class="bg-color-gray py-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3  row-cols-lg-4 g-4 ">
+          @@include('./partails/layout/blog-box.html')
+          @@include('./partails/layout/blog-box.html')
+          @@include('./partails/layout/blog-box.html')
+          @@include('./partails/layout/blog-box.html')
+          @@include('./partails/layout/blog-box.html')
+          @@include('./partails/layout/blog-box.html')
+          @@include('./partails/layout/blog-box.html')
+          @@include('./partails/layout/blog-box.html')
+          @@include('./partails/layout/blog-box.html')
+          @@include('./partails/layout/blog-box.html')
+          @@include('./partails/layout/blog-box.html')
+          @@include('./partails/layout/blog-box.html')
+        </div>
+        <nav class="mt-5">
+          <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#"><i class="fas  fa-angle-right"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </div>
+</main>
+
+@@include('./partails/footer.html')

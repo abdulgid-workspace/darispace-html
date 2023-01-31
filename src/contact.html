@@ -1,0 +1,57 @@
+@@include('./partails/header.html',{"title": "Contact Us",'class':"", 'header-class':''})
+<main class="app-main contact-page">
+  <div class="main-content">
+    @@include('./partails/hero.html',{"title": "Contact Us"})
+    <section class="border-top border-bottom py-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-lg-2">
+          <div class="contact-info">
+            <h2 class="mb-4">Contact Info</h2>
+            <ul>
+              <li>
+                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                <p>
+                  155, Hosni Mubarak St, Sheraton, Cairo, Egypt.</p>
+              </li>
+              <li>
+                <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                <p><a href="tel:+96650084154515">+96650084154515</a></p>
+              </li>
+              <li>
+                <div class="icon"><i class="far fa-envelope"></i></div>
+                <p><a href="mailto:info@darispace.com">info@darispace.com</a></p>
+              </li>
+          </div>
+          <div class="contact-form">
+            <h3 class="mb-4">Get Touch</h3>
+            <form>
+              <div class="mb-3">
+                <labe class="form-label"></label>
+                  <input type="text" class="form-control" placeholder="Name">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email address">
+              </div>
+              <div class="mb-3">
+                <input type="tel" class="form-control" placeholder="Mobile">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" placeholder="Massage"></textarea>
+              </div>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="button">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="map">
+      <a href="http://map.google.com" rel="noopener" target="_blank">
+        <img src="@@webRoot/assets/images/map.jpg" alt="logo">
+      </a>
+    </div>
+  </div>
+</main>
+
+@@include('./partails/footer.html')
