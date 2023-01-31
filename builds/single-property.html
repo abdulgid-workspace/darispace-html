@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/app.min.css" />
+
+
+</head>
+
+<body class="">
+
+  <!-- preloader -->
+  <!-- <div class="preloader">
+    <div class="preloader-bg"></div>
+    <div class="preloader-body">
+      <div class="loading">
+        <div class="percent"><span class="preloader-number" data-count="101">00</span><span>%</span></div>
+      </div>
+      <div class="loading-bar">
+        <div class="bar"></div>
+      </div>
+    </div>
+  </div>
+  <div class="load"></div> -->
+  <div class="wrapper">
+    <header id="header" class="header ">
+      <div class="container">
+        <div class="header_wrapper">
+          <div class="logo">
+            <a href="./index.html">
+              <img src="./assets/images/logo.png" alt="logo">
+            </a>
+          </div>
+          <nav class="main-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </nav>
+          <div class="header-actions">
+            <ul>
+              <li class="auth">
+                <a href="#" data-toggle="modal" data-target="#modal-login">Signin</a>
+              </li>
+              <li class="menu">
+                <a href="javascript: voild(0);" data-toggle="menu" data-target="#menu-main">
+                  <i class="far fa-bars"></i>
+                </a>
+              </li>
+              <li class="add-list">
+                <a href="#" class="btn  btn-accent btn-lg"><i class="fal fa-home me-2"></i> Add listing</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Start App Menu -->
+<aside id="menu-main" class="app-menu">
+  <div class="app-menu__offcanvas">
+    <div class="app-menu__container">
+      <div class="app-menu__header">
+        <div class="header-logo">
+          <h2>Menu</h2>
+        </div>
+        <div class="close-menu" data-dismiss="menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path
+            d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z" />
+        </svg></div>
+      </div>
+      <div class="app-menu__inner">
+        <nav class="main-menu-vr">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</aside>
+<!-- End App Menu -->
+    <div id="modal-login" class="app-modal-login app-modal">
+  <div class="app-modal-container">
+    <button type="button" class="app-modal-close" data-dismiss="modal" aria-label="close">
+      <i class="fal fa-times"></i>
+    </button>
+    <div class="app-modal-wrap">
+      <div class="app-modal-head">
+        <div class="app-modal-logo">
+          <a href="#" class="home-link">
+            <img class="logo-app" src="./assets/images/logo.png" alt="logo" width="150">
+          </a>
+        </div>
+      </div>
+      <div class="auth-form login-auth-form">
+        <div class="app-modal-wrapper">
+          <h4>Login</h4>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Email address</label>
+              <input type="email" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="d-flex mb-3">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" for="remmber">
+                <label class="form-check-label" id="remmber"> Remmber me</label>
+              </div>
+              <a href="#" class="d-inline-block ms-auto" data-form="lostpassword">Forget password?</a>
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="button">Login</button>
+            </div>
+          </form>
+        </div>
+        <div class="app-modal-footer">
+          <div class="or">
+            <hr><span>Or</span>
+          </div>
+          <p>Don't have any account?<a href="#" data-form="register">Register</a></p>
+        </div>
+      </div>
+      <div class="auth-form register-auth-form">
+        <div class="app-modal-wrapper">
+          <h4>Register</h4>
+          <form>
+            <div class="mb-3">
+              <labe class="form-label">Username</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+              <labe class="form-label">Email address</label>
+                <input type="email" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Confirm Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="button">Register</button>
+            </div>
+          </form>
+        </div>
+        <div class="app-modal-footer">
+          <div class="or">
+            <hr><span>Or</span>
+          </div>
+          <p>Already have an account?<a href="#" data-form="login">Login</a></p>
+        </div>
+      </div>
+      <div class="auth-form lostpassword-auth-form">
+        <div class="app-modal-wrapper">
+          <h4>Lost Password</h4>
+          <form>
+            <div class="mb-3">
+              <labe class="form-label">Email address</label>
+                <input type="email" class="form-control">
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="button">Rest Password</button>
+            </div>
+          </form>
+        </div>
+        <div class="app-modal-footer">
+          <div class="or">
+            <hr><span>Or</span>
+          </div>
+          <p>Back<a href="#" data-form="login">Login</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<main class="app-main single-property">
+  <div class="main-content">
+    <header class="single-property-head mb-4">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb py-3">
+            <li class="breadcrumb-item">
+              <a href=".">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="listing-grid-with-left-filter.html">Listing</a>
+            </li>
+            <li class="breadcrumb-item active">Villa on Hollywood Boulevard</li>
+          </ol>
+        </nav>
+        <div class="d-md-flex justify-content-md-between mb-1">
+          <ul class="list-inline d-sm-flex align-items-sm-center mb-0">
+            <li class="list-inline-item badge text-bg-primary me-2">Featured</li>
+            <li class="list-inline-item badge text-bg-info me-3">For Sale</li>
+            <li class="list-inline-item me-2 mt-2 mt-sm-0"><i class="fal fa-clock me-1"></i>2 months ago</li>
+            <li class="list-inline-item mt-2 mt-sm-0"><i class="fal fa-eye me-1"></i>1039 views</li>
+          </ul>
+          <ul class="list-inline my-4 my-md-2">
+            <li class="list-inline-item me-2">
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="far fa-heart me-2"></i>Save
+              </a>
+            </li>
+            <li class="list-inline-item me-2">
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="far fa-share-alt me-2"></i>Share
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="far fa-print me-2"></i>Print
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-md-flex justify-content-md-between mb-6">
+          <div>
+            <h2 class="single-property-title">Villa on Hollywood Boulevard</h2>
+            <p class="mb-0"><i class="fal fa-map-marker-alt me-2"></i>398 Pete Pascale Pl, New York</p>
+          </div>
+          <div class="mt-2 text-md-end">
+            <strong class="single-property-price">$1.250.000</strong>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="single-property-gallery mb-5">
+      <div class="container">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/images/single-property.jpg" alt="blog">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/single-property.jpg" alt="blog">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/single-property.jpg" alt="blog">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/single-property.jpg" alt="blog">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/single-property.jpg" alt="blog">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/single-property.jpg" alt="blog">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/single-property.jpg" alt="blog">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/single-property.jpg" alt="blog">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/single-property.jpg" alt="blog">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+    <div class="single-property-content bg-color-gray py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <section class="single-property-description card p-2 mb-3">
+              <div class="card-body">
+                <h4 class="mb-4">Description</h4>
+                <p class="mb-0">Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus
+                  faucibus scelerisque eleifend donec. Porta nibh venenatis cras sed felis eget velit aliquet.
+                  Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas
+                  congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu
+                  sem. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque. Id interdum velit
+                  laoreet
+                  id donec ultrices tincidunt.</p>
+              </div>
+            </section>
+            <section class="single-property-features card p-2 mb-3">
+              <div class="card-body">
+                <h4 class="mb-4">Features</h4>
+                <ul>
+                  <li><i class="far fa-bed"></i>
+                    <div class="content">
+                      <span>TYPE</span>
+                      <strong>Single Family</strong>
+                    </div>
+                  </li>
+                  <li><i class="far fa-bed"></i>
+                    <div class="content">
+                      <span>TYPE</span>
+                      <strong>Single Family</strong>
+                    </div>
+                  </li>
+                  <li><i class="far fa-bed"></i>
+                    <div class="content">
+                      <span>TYPE</span>
+                      <strong>Single Family</strong>
+                    </div>
+                  </li>
+                  <li><i class="far fa-bed"></i>
+                    <div class="content">
+                      <span>TYPE</span>
+                      <strong>Single Family</strong>
+                    </div>
+                  </li>
+                  <li><i class="far fa-bed"></i>
+                    <div class="content">
+                      <span>TYPE</span>
+                      <strong>Single Family</strong>
+                    </div>
+                  </li>
+                  <li><i class="far fa-bed"></i>
+                    <div class="content">
+                      <span>TYPE</span>
+                      <strong>Single Family</strong>
+                    </div>
+                  </li>
+                  <li><i class="far fa-bed"></i>
+                    <div class="content">
+                      <span>TYPE</span>
+                      <strong>Single Family</strong>
+                    </div>
+                  </li>
+                  <li><i class="far fa-bed"></i>
+                    <div class="content">
+                      <span>TYPE</span>
+                      <strong>Single Family</strong>
+                    </div>
+                  </li>
+                  <li><i class="far fa-bed"></i>
+                    <div class="content">
+                      <span>TYPE</span>
+                      <strong>Single Family</strong>
+                    </div>
+                  </li>
+                  <li><i class="far fa-bed"></i>
+                    <div class="content">
+                      <span>TYPE</span>
+                      <strong>Single Family</strong>
+                    </div>
+                  </li>
+                  <li><i class="far fa-bed"></i>
+                    <div class="content">
+                      <span>TYPE</span>
+                      <strong>Single Family</strong>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="single-property-additional card p-2 mb-3">
+              <div class="card-body">
+                <h4 class="mb-4">Additional Details</h4>
+                <div class="row">
+                  <dl class="col-sm-6 mb-0 d-flex">
+                    <dt class="font-weight-500 text-heading pe-2">Property ID:</dt>
+                    <dd>AD-2910</dd>
+                  </dl>
+                  <dl class="col-sm-6 mb-0 d-flex">
+                    <dt class="font-weight-500 text-heading pe-2">Price:</dt>
+                    <dd>$890.000</dd>
+                  </dl>
+                  <dl class="col-sm-6 mb-0 d-flex">
+                    <dt class="font-weight-500 text-heading pe-2">Property type:</dt>
+                    <dd>Apartment, bar, cafe, villa</dd>
+                  </dl>
+                  <dl class="col-sm-6 mb-0 d-flex">
+                    <dt class="font-weight-500 text-heading pe-2">Property status:</dt>
+                    <dd>For Sale</dd>
+                  </dl>
+                  <dl class="col-sm-6 mb-0 d-flex">
+                    <dt class="font-weight-500 text-heading pe-2">Rooms:</dt>
+                    <dd>4</dd>
+                  </dl>
+                  <dl class="col-sm-6 mb-0 d-flex">
+                    <dt class="font-weight-500 text-heading pe-2">Bedrooms:</dt>
+                    <dd>3</dd>
+                  </dl>
+                  <dl class="col-sm-6 mb-0 d-flex">
+                    <dt class="font-weight-500 text-heading pe-2">Size:</dt>
+                    <dd>900SqFt</dd>
+                  </dl>
+                  <dl class="col-sm-6 mb-0 d-flex">
+                    <dt class="font-weight-500 text-heading pe-2">Bathrooms:</dt>
+                    <dd>2</dd>
+                  </dl>
+                  <dl class="col-sm-6 mb-0 d-flex">
+                    <dt class="font-weight-500 text-heading pe-2">Garage:</dt>
+                    <dd>1</dd>
+                  </dl>
+                  <dl class="col-sm-6 mb-0 d-flex">
+                    <dt class="font-weight-500 text-heading pe-2">Bathrooms:</dt>
+                    <dd>2000 SqFt</dd>
+                  </dl>
+                  <dl class="col-sm-6 mb-0 d-flex">
+                    <dt class="font-weight-500 text-heading pe-2">Garage size:</dt>
+                    <dd>50 SqFt</dd>
+                  </dl>
+                  <dl class="col-sm-6 mb-0 d-flex">
+                    <dt class="font-weight-500 text-heading pe-2">Year build:</dt>
+                    <dd>2020</dd>
+                  </dl>
+                  <dl class="offset-sm-6 col-sm-6 mb-0 d-flex">
+                    <dt class="font-weight-500 text-heading pe-2">Label:</dt>
+                    <dd>Bestseller</dd>
+                  </dl>
+                </div>
+              </div>
+            </section>
+          </div>
+          <aside class="col-lg-4 ps-xl-4 single-property-sidebar">
+            <div class="card mb-4">
+              <div class="card-body px-6 py-4 text-center">
+                <a href="#" class="d-block mb-2">
+                  <img src="./assets/images/user.jpg" class="rounded-circle" alt="Oliver Beddows">
+                </a>
+                <h5 href="#"><a href="#">Oliver
+                Beddows</a></h5> 
+                <div class="border-top pt-4 mt-4">
+                  <a href="tel:01011111111" target="_blank" class="btn btn-light btn-lg me-4"><i class="far fa-phone-alt me-1"></i> Call Now</a>
+                  <a href="https://wa.me/0201011111111" target="_blank" class="btn btn-success btn-lg"><i class="fab fa-whatsapp me-1"></i> Whatsapp</a>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer id="footer" class="footer">
+  <div class="footer_wrapper">
+    <div class="footer_top">
+      <div class="container">
+        <div class="logo">
+          <img src="./assets/images/logo.png" alt="logo">
+        </div>
+        <div class="footer-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="social-icons">
+          <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fab fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer_copyright">
+        <p>
+          <script>
+            var dateNow = new Date(),
+              year = dateNow.getFullYear();
+            document.write("Copyright &copy; " + year + ' Darispace.')
+          </script>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+<!-- <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+
+<script src="./assets/js/app.min.js"></script>
+</body>
+
+</html>

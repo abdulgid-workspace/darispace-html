@@ -8,8 +8,8 @@
   <title>Home</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 
   <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
@@ -34,7 +34,7 @@
   </div>
   <div class="load"></div> -->
   <div class="wrapper">
-    <header id="header" class="header">
+    <header id="header" class="header header-overlay">
       <div class="container">
         <div class="header_wrapper">
           <div class="logo">
@@ -61,7 +61,7 @@
                 </a>
               </li>
               <li class="add-list">
-                <a href="#" class="btn btn-outline-light btn-lg"><i class="fal fa-home me-2"></i> Add listing</a>
+                <a href="#" class="btn  btn-accent btn-lg"><i class="fal fa-home me-2"></i> Add listing</a>
               </li>
             </ul>
           </div>
@@ -196,8 +196,8 @@
   </div>
 </div>
 
-<main class="app_main">
-  <div class="main_content">
+<main class="app-main home-main">
+  <div class="main-content">
     <section class="hero-home section-main">
   <div class="section-wrapper" style="background-image: url(./assets/images/bg-home.jpg)">
     <div class="quick-contact container">
@@ -236,8 +236,8 @@
           <div class="row">
             <div class="mb-3 mb-lg-0 col-md-6 col-lg-3">
               <label class="form-label">HOME TYPE</label>
-              <select class="form-select">
-                <option selected>Open this select menu</option>
+              <select name="type-1" class="form-select">
+                <option selected>Choose</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
@@ -245,8 +245,8 @@
             </div>
             <div class="mb-3 mb-lg-0 col-md-6 col-lg-3">
                <label class="form-label">HOME TYPE</label>
-              <select class="form-select">
-                <option selected>Open this select menu</option>
+              <select name="type-1" class="form-select">
+                <option selected>Choose</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
@@ -254,15 +254,15 @@
             </div>
             <div class="mb-3 mb-lg-0 col-md-6 col-lg-3">
                <label class="form-label">HOME TYPE</label>
-              <select class="form-select">
-                <option selected>Open this select menu</option>
+              <select name="type-2" class="form-select">
+                <option selected>Choose</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
               </select>
             </div>
-              <div class="mb-3 mb-lg-0 col-md-6 col-lg-3">
-                <div class="d-grid gap-2">
+              <div class="col-md-6 col-lg-3">
+                <div class="d-grid gap-2 mt-0 mt-md-4 d-grid gap-2">
                   <button class="btn btn-primary btn-lg" type="button">Search</button>
                 </div> 
               </div>
@@ -295,7 +295,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -304,7 +304,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -325,7 +325,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -334,7 +334,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -355,7 +355,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -364,7 +364,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -385,7 +385,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -394,7 +394,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -415,7 +415,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -424,7 +424,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -445,7 +445,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -454,7 +454,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -475,7 +475,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -484,7 +484,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -505,7 +505,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -514,7 +514,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -535,7 +535,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -544,7 +544,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -674,7 +674,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -683,7 +683,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -704,7 +704,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -713,7 +713,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -734,7 +734,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -743,7 +743,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -764,7 +764,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -773,7 +773,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -794,7 +794,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -803,7 +803,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -824,7 +824,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -833,7 +833,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -854,7 +854,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -863,7 +863,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -884,7 +884,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -893,7 +893,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -914,7 +914,7 @@
               <div class="property-box">
   <div class="property-box_wrap">
     <div class="property-box_image">
-      <a href="#">
+      <a href="./single-property.html">
         <img src="./assets/images/properties-grid-01.jpg" alt="">
       </a>
       <div class="badags">
@@ -923,7 +923,7 @@
       </div>
     </div>
     <div class="property-box_body">
-      <h6><a href="#">Affordable Urban House</a></h6>
+      <h6><a href="./single-property.html">Affordable Urban House</a></h6>
       <p>1421 San Pedro St, Los Angeles</p>
       <ul>
         <li data-tooltip="3 Bedromm"><i class="fas fa-bed"></i>3 Br</li>
@@ -1074,10 +1074,7 @@
     </div>
   </div>
 </section>
-  </div>
-</main>
-
-<section class="partners-section py-5 bg-color-gray">
+    <section class="partners-section py-5 bg-color-gray">
   <div class="container">
     <div class="swiper">
       <div class="swiper-wrapper">
@@ -1086,7 +1083,8 @@
         </div>
         <div class="swiper-slide">
           <img src="./assets/images/partner-hover-1.png" alt="logo">
-        </div><div class="swiper-slide">
+        </div>
+        <div class="swiper-slide">
           <img src="./assets/images/partner-hover-1.png" alt="logo">
         </div>
         <div class="swiper-slide">
@@ -1114,6 +1112,8 @@
     </div>
   </div>
 </section>
+  </div>
+</main>
 
 <footer id="footer" class="footer">
   <div class="footer_wrapper">

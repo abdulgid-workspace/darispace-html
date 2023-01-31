@@ -33,6 +33,11 @@
   line-height: 2;
   transition: all 0.3s ease-in-out;
 }
+.btn-sm {
+  --bs-btn-padding-y: 0.1rem;
+  --bs-btn-padding-x: 0.6rem;
+  --bs-btn-font-weight: 400;
+}
 
 .btn-lg i {
   font-size: 1rem;
@@ -48,4 +53,16 @@
     background-color: #d6e8ea;
     border-color: #cde3e6;
   }
+}
+
+.btn-outline-light {
+  border-color: var(--grey);
+  --bs-btn-color: var(--black);
+  --bs-btn-border-color: var(--primary);
+}
+
+.btn-outline-light i {
+  font-size: 1rem;
+  vertical-align: middle;
+  color: var(--primary);
 }

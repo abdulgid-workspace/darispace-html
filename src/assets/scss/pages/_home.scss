@@ -39,6 +39,26 @@
     .swiper {
       padding-bottom: 25px;
     }
+
+    .swiper-pagination {
+      bottom: 0 !important;
+    }
+
+    .swiper-button-next {
+      right: -55px;
+      left: auto;
+      @include media-lg {
+        right: 0;
+      }
+    }
+
+    .swiper-button-prev {
+      left: -55px;
+      right: auto;
+      @include media-lg {
+        left: 0;
+      }
+    }
   }
 }
 
@@ -53,6 +73,8 @@
 
 .partners-section {
   img {
+    width: auto;
+    object-fit: contain;
     filter: grayscale(100%);
     transition: 0.3s ease;
     cursor: pointer;

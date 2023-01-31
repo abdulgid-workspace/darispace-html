@@ -219,7 +219,25 @@ window.addEventListener("DOMContentLoaded", function () {
   (function () {
     Swiper.use([Navigation, Pagination, Autoplay]);
 
-    // properties Slides
+    // Property Gallery
+    const home = new Swiper(".single-property-gallery .swiper", {
+      slidesPerView: 1,
+      speed: 800,
+      autoplay: {
+        delay: 2500,
+      },
+      pagination: {
+        el: ".single-property-gallery .swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      navigation: {
+        nextEl: ".single-property-gallery .swiper-button-next",
+        prevEl: ".single-property-gallery .swiper-button-prev",
+      },
+    });
+
+    // Properties Slides
     const properties = new Swiper(".properties-carousal .swiper", {
       speed: 800,
       spaceBetween: 20,
@@ -251,7 +269,7 @@ window.addEventListener("DOMContentLoaded", function () {
       },
     });
 
-    // partners Slides
+    // Partners Slides
     const partners = new Swiper(".partners-section .swiper", {
       speed: 800,
       spaceBetween: 20,

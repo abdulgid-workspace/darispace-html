@@ -1,0 +1,54 @@
+.single-property {
+  &-price {
+    font-size: 1.5rem;
+    color: var(--primary);
+  }
+  &-gallery {
+    .swiper-pagination-bullet {
+      background-color: var(--white);
+    }
+    img {
+      border-radius: 8px;
+      max-height: 550px;
+      object-fit: cover;
+    }
+  }
+  &-features {
+    ul {
+      display: grid;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      @media screen and (max-width: 1400px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include media-md {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include media-sm {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      li {
+        display: inline-flex;
+        i {
+          color: var(--primary);
+          border: 1px solid var(--grey);
+          font-size: 2rem;
+          border-radius: 0.3125rem;
+          margin-right: 0.625rem;
+          padding: 0.625rem;
+        }
+        span,
+        strong {
+          display: block;
+          color: var(--black);
+        }
+      }
+    }
+  }
+  &-sidebar{
+    img{
+      width: 140px;
+    }
+  }
+}

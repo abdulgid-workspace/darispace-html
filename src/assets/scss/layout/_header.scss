@@ -1,24 +1,69 @@
 .header {
-  position: absolute;
   top: 0;
   right: 0;
   left: 0;
   width: 100%;
   z-index: 999;
-  @include media-md {
-    position: fixed;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
-    background-color: var(--white);
+  background-color: var(--white);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+  &.header-overlay {
+    position: absolute;
+    background-color: transparent;
+    box-shadow: none;
+    &.sticking {
+      background-color: var(--white);
+      .main-menu > ul > li > a {
+        color: var(--black) !important;
+        &:hover {
+          color: var(--primary) !important;
+        }
+      }
+      .header-actions {
+        li {
+          &::after {
+            border-color: var(--black) !important;
+          }
+          & > a {
+            color: var(--black) !important;
+          }
+          .btn {
+            background-color: var(--grey) !important;
+          }
+        }
+      }
+    }
+    .main-menu > ul > li > a {
+      color: var(--white);
+    }
     .header-actions {
       li {
         &::after {
-          border-color: var(--black) !important;
+          border-color: var(--white) !important;
         }
         & > a {
-          color: var(--black) !important;
+          color: var(--white) !important;
         }
         .btn {
-          border-color: var(--black) !important;
+          border-color: var(--white) !important;
+          background-color: transparent !important;
+        }
+      }
+    }
+    @include media-md {
+      position: fixed;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+      background-color: var(--white);
+      .header-actions {
+        li {
+          &::after {
+            border-color: var(--black) !important;
+          }
+          & > a {
+            color: var(--black) !important;
+          }
+          .btn {
+            border-color: var(--black) !important;
+          }
         }
       }
     }
@@ -27,26 +72,6 @@
     position: fixed;
     animation: menu_sticky 0.5s;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
-    background-color: var(--white);
-    z-index: 1000;
-    .main-menu {
-      li > a {
-        color: var(--black);
-      }
-    }
-    .header-actions {
-      li {
-        &::after {
-          border-color: var(--black) !important;
-        }
-        & > a {
-          color: var(--black);
-        }
-        .btn {
-          border-color: var(--black);
-        }
-      }
-    }
     @keyframes menu_sticky {
       0% {
         margin-top: -120px;
@@ -61,8 +86,6 @@
         opacity: 1;
       }
     }
-  }
-  @media screen and (min-width: 768px) {
   }
   &_wrapper {
     display: flex;
@@ -92,6 +115,9 @@
         &:not(:last-child) {
           margin-right: 20px;
         }
+        li > a {
+          color: var(--black);
+        }
       }
     }
   }
@@ -108,7 +134,7 @@
           &::after {
             position: absolute;
             content: "";
-            border-right: 1px solid var(--white);
+            border-right: 1px solid var(--black);
             left: -20px;
             top: 50%;
             bottom: 0;
@@ -137,7 +163,7 @@
           display: flex;
           align-items: center;
           position: relative;
-          color: var(--white);
+          color: var(--black);
           font-size: 1rem;
           i {
             font-size: 20px;
