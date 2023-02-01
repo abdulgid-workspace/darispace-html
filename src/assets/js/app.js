@@ -154,14 +154,7 @@ window.jQuery = $;
         var dataTarget = $(this).data("target");
         $(dataTarget).fadeIn();
         $(dataTarget).addClass("opened");
-        var $videoSrc;
-        $videoSrc = $(this).attr("data-video");
-        if ($videoSrc) {
-          $(dataTarget + " iframe").attr(
-            "src",
-            $videoSrc + "?autoplay=0&amp;modestbranding=1&amp;showinfo=0"
-          );
-        }
+        $("body").css("overflow", "hidden");
       });
 
       // Close Modal
@@ -170,7 +163,7 @@ window.jQuery = $;
         var getModal = $(this).parents(".app-modal");
         getModal.fadeOut();
         getModal.removeClass("opened");
-        getModal.find("iframe").attr("src", "");
+        $("body").css("overflow", "auto");
       });
 
       $("[data-dismiss='form']").on("submit", function (e) {
@@ -184,13 +177,14 @@ window.jQuery = $;
         e.preventDefault();
         $(this).fadeOut();
         $(this).removeClass("opened");
-        $(this + " iframe").attr("src", "");
+        $("body").css("overflow", "auto");
       });
 
       $(document).on("keydown", function (e) {
         if (e.keyCode == 27) {
           $(".app-modal").fadeOut();
           $(".app-modal").removeClass("opened");
+          $("body").css("overflow", "auto");
         }
       });
       // Stop Propagation app-modal Offcanvas
@@ -207,6 +201,16 @@ window.jQuery = $;
           .parents(".app-modal-container")
           .find("." + thisELe + "-auth-form")
           .show();
+      });
+    })();
+
+    // Menu dashboard
+    (function () {
+      // Open Menu
+      $(".open-menu-dashboard").on("click", function (e) {
+        e.preventDefault();
+        $("body").toggleClass("opened-menu");
+        $(this).toggleClass("opened");
       });
     })();
   }

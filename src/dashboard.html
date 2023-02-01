@@ -1,0 +1,74 @@
+@@include('./partails/header-dashboard.html',{"title": "Dashboard"})
+
+<main class="app-main dashboard-main">
+  <div class="main_wrapper">
+    @@include('./partails/menu-dashboard.html')
+    <div class="main-content">
+      <div class="d-flex flex-wrap flex-md-nowrap mb-4">
+        <div class="mb-4 me-0 mb-md-0 me-md-auto">
+          <h1 class="h3 mb-0">Welcome back, Ahmed Abdulgid!</h1>
+        </div>
+        <div><a href="@@webRoot/add-new.html" class="btn btn-primary btn-lg"><i class="far fa-layer-plus me-2"></i>Add
+            New Property</a></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-xl-3 mb-3">
+          <div class="box-statistic">
+            <span class="icon bg-secondary-subtle border border-secondary-subtle text-secondary">
+              <i class="far fa-layer-group"></i>
+            </span>
+            <div class="content">
+              <h3 class="mb-0">29</h3>
+              <p>Properties</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-3">
+          <div class="box-statistic">
+            <span class="icon bg-primary-subtle border border-primary-subtle text-primary">
+              <i class="far fa-layer-group"></i>
+            </span>
+            <div class="content">
+              <h3 class="mb-0">29</h3>
+              <p>Properties</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-3">
+          <div class="box-statistic">
+            <span class="icon bg-danger-subtle border border-danger-subtle text-danger">
+              <i class="far fa-layer-group"></i>
+            </span>
+            <div class="content">
+              <h3 class="mb-0">29</h3>
+              <p>Properties</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-3">
+          <div class="box-statistic">
+            <span class="icon bg-success-subtle border border-success-subtle text-success">
+              <i class="far fa-layer-group"></i>
+            </span>
+            <div class="content">
+              <h3 class="mb-0">29</h3>
+              <p>Properties</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer_copyright">
+    <p>
+      <script>
+        var dateNow = new Date(),
+          year = dateNow.getFullYear();
+        document.write("Copyright &copy; " + year + ' Darispace.')
+      </script>
+    </p>
+  </footer>
+
+</main>
+
+@@include('./partails/footer-dashboard.html')

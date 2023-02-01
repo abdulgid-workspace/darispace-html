@@ -1,0 +1,28 @@
+@@include('./partails/header-dashboard.html',{"title": "Add New"})
+
+<main class="app-main dashboard-main">
+  <div class="main_wrapper">
+    @@include('./partails/menu-dashboard.html')
+    <div class="main-content">
+      <div class="d-flex flex-wrap flex-md-nowrap mb-4">
+        <div class="mb-4 me-0 mb-md-0 me-md-auto">
+          <h1 class="h3 mb-0">Add
+          New Property</h1>
+        </div> 
+      </div>
+   
+    </div>
+  </div>
+  <footer class="footer_copyright">
+    <p>
+      <script>
+        var dateNow = new Date(),
+          year = dateNow.getFullYear();
+        document.write("Copyright &copy; " + year + ' Darispace.')
+      </script>
+    </p>
+  </footer>
+
+</main>
+
+@@include('./partails/footer-dashboard.html')

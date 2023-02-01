@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/app.min.css" />
+
+
+</head>
+
+<body class="dashboard">
+  <div class="wrapper">
+    <header id="topbar-dashboard" class="topbar-dashboard">
+      <div class="topbar_wrapper">
+        <div class="topbar_left">
+          <div class="logo">
+            <a href="./index.html">
+              <img src="./assets/images/logo.png" alt="logo">
+            </a>
+          </div>
+        </div>
+        <div class="topbar_right">
+          <div class="user-avatar ">
+            <img src="./assets/images/user.jpg" alt="user">
+            <span>hi, Ahmed</span>
+          </div>
+          <a class="open-menu-dashboard"><i class="far fa-bars"></i></a>
+        </div>
+      </div>
+    </header>
+
+<main class="app-main dashboard-main">
+  <div class="main_wrapper">
+    <aside class="menu-dashboard">
+  <div class="menu-wrapper">
+    <nav>
+      <ul>
+        <li class="label">Main</li>
+        <li><a href="./dashboard.html" class="active"><i class="far fa-tachometer-alt-slowest"></i>Dashboard</a></li>
+        <li class="label">Manage Listings</li>
+        <li><a href="./add-new.html"><i class="far fa-layer-plus"></i>Add New Progerty</a></li>
+        <li><a href="./my-list.html"><i class="far fa-layer-group"></i>My Progerties</a></li>
+        <li class="label">Manage Account</li>
+        <li><a href="./profile.html"><i class="far fa-user-circle"></i>My Profile</a></li>
+        <li><a href="./profile.html"><i class="far fa-sign-out"></i>log out</a></li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+    <div class="main-content">
+      <div class="d-flex flex-wrap flex-md-nowrap mb-4">
+        <div class="mb-4 me-0 mb-md-0 me-md-auto">
+          <h1 class="h3 mb-0">Welcome back, Ahmed Abdulgid!</h1>
+        </div>
+        <div><a href="./add-new.html" class="btn btn-primary btn-lg"><i class="far fa-layer-plus me-2"></i>Add
+            New Property</a></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-xl-3 mb-3">
+          <div class="box-statistic">
+            <span class="icon bg-secondary-subtle border border-secondary-subtle text-secondary">
+              <i class="far fa-layer-group"></i>
+            </span>
+            <div class="content">
+              <h3 class="mb-0">29</h3>
+              <p>Properties</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-3">
+          <div class="box-statistic">
+            <span class="icon bg-primary-subtle border border-primary-subtle text-primary">
+              <i class="far fa-layer-group"></i>
+            </span>
+            <div class="content">
+              <h3 class="mb-0">29</h3>
+              <p>Properties</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-3">
+          <div class="box-statistic">
+            <span class="icon bg-danger-subtle border border-danger-subtle text-danger">
+              <i class="far fa-layer-group"></i>
+            </span>
+            <div class="content">
+              <h3 class="mb-0">29</h3>
+              <p>Properties</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-3">
+          <div class="box-statistic">
+            <span class="icon bg-success-subtle border border-success-subtle text-success">
+              <i class="far fa-layer-group"></i>
+            </span>
+            <div class="content">
+              <h3 class="mb-0">29</h3>
+              <p>Properties</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer_copyright">
+    <p>
+      <script>
+        var dateNow = new Date(),
+          year = dateNow.getFullYear();
+        document.write("Copyright &copy; " + year + ' Darispace.')
+      </script>
+    </p>
+  </footer>
+
+</main>
+
+ 
+
+</div>
+<script src="./assets/js/app.min.js"></script>
+</body>
+
+</html>
