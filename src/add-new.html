@@ -7,10 +7,330 @@
       <div class="d-flex flex-wrap flex-md-nowrap mb-4">
         <div class="mb-4 me-0 mb-md-0 me-md-auto">
           <h1 class="h3 mb-0">Add
-          New Property</h1>
-        </div> 
+            New Property</h1>
+        </div>
       </div>
-   
+
+      <form class="form-wizerd">
+        <!-- Steps Indicators -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="steps__indicator-wrapper">
+              <div class="steps__indicator-line"></div>
+              <ol class="steps__indicators">
+                <li class="btn btn-success"><i class="far fa-info-circle me-1"></i> Basic</li>
+                <li class="btn btn-secondary"><i class="far fa-list me-1"></i>Specification</li>
+                <li class="btn btn-secondary"><i class="far fas fa-phone-alt me-1"></i>Cotnact</li>
+                <li class="btn btn-secondary"><i class="far fa-map-marked-alt me-1"></i>Location</li>
+                <li class="btn btn-secondary"><i class="far fa-images me-1"></i>Media</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="steps" data-steps>
+
+          <!-- Start Step -->
+          <div class="step">
+            <div class="row">
+              <div class="mb-3 mb-md-0 col-md-8">
+                <!-- Box Start -->
+                <div class="card">
+                  <div class="card-header">
+                    <i class="far fa-info-circle me-1"></i>
+                    Basic
+                  </div>
+                  <div class="card-body">
+                    <div class="mb-3">
+                      <label class="form-label">Title</label>
+                      <input type="text" class="form-control" required="true" placeholder="Example: Title">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Description</label>
+                      <textarea class="form-control" required="true" placeholder="Example: Title" rows="15"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <!-- Box End -->
+              </div>
+              <div class="mb-3 mb-md-0 col-md-4">
+                <!-- Box Start -->
+                <div class="card">
+                  <div class="card-header">
+                    <i class="far fa-clipboard-list me-1"></i>
+                    Taxonomies
+                  </div>
+                  <div class="card-body">
+                    <div class="mb-3">
+                      <label class="form-label" for="catagory-select">Catagory</label>
+                      <select class="form-select" required="true" name="catagory" id="catagory-select">
+                        <option value="">Choose</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" for="payment-select">Payment Term</label>
+                      <select class="form-select" required="true" name="payment" id="payment-select">
+                        <option value="">Choose</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" for="listing-select">Listing Type</label>
+                      <select class="form-select" required="true" name="listing" id="listing-select">
+                        <option value="">Choose</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" for="classification-select">Classification</label>
+                      <select class="form-select" required="true" name="classification" id="classification-select">
+                        <option value="">Choose</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- Box End -->
+                <!-- Box Start -->
+                <div class="card mt-4">
+                  <div class="card-header">
+                    <i class="far fa-money-bill-alt me-1"></i>
+                    Pricing
+                  </div>
+                  <div class="card-body row">
+                    <div class="col-sm-6 col-md-12 col-lg-6 mb-3">
+                      <label class="form-label">Price</label>
+                      <input type="number" class="form-control" placeholder="5" required="true">
+                    </div>
+                    <div class="col-sm-6 col-md-12 col-lg-6 mb-3">
+                      <label class="form-label" for="curreny-select">Curreny</label>
+                      <select class="form-select" required="true" name="curreny" id="curreny-select">
+                        <option value="">Choose</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- Box End -->
+              </div>
+            </div>
+          </div>
+          <!-- End Step -->
+
+          <!-- Start Step -->
+          <div class="step">
+            <!-- Box Start -->
+            <div class="card">
+              <div class="card-header">
+                <i class="far fa-list me-1"></i>
+                Specification
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="mb-3 col-sm-6 col-lg-4">
+                    <label class="form-label" for="spece-select">Spece</label>
+                    <select class="form-select" required="true" name="spece" id="spece-select">
+                      <option value="">Choose</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="mb-3 col-sm-6 col-lg-4">
+                    <label class="form-label">Floors</label>
+                    <input type="number" class="form-control" placeholder="5" required="true">
+                  </div>
+                  <div class="mb-3 col-sm-6 col-lg-4">
+                    <label class="form-label">Estaiblish Year</label>
+                    <input type="number" class="form-control" placeholder="2023" required="true">
+                  </div>
+                  <div class="mb-3 col-sm-6 col-lg-4">
+                    <label class="form-label">Rooms</label>
+                    <input type="number" class="form-control" placeholder="5" required="true">
+                  </div>
+                  <div class="mb-3 col-sm-6 col-lg-4">
+                    <label class="form-label">Bathrooms</label>
+                    <input type="number" class="form-control" placeholder="2" required="true">
+                  </div>
+                  <div class="mb-3 col-sm-6 col-lg-4">
+                    <label class="form-label" for="finishing-select">Finishing</label>
+                    <select class="form-select" required="true" name="finishing" id="finishing-select">
+                      <option value="">Choose</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- Box End -->
+          </div>
+          <!-- End Step -->
+
+          <!-- Start Step -->
+          <div class="step">
+            <!-- Box Start -->
+            <div class="card">
+              <div class="card-header">
+                <i class="far fas fa-phone-alt me-1"></i>Cotnact
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="mb-3 col-sm-6">
+                    <label class="form-label">Phone</label>
+                    <input type="tel" class="form-control" placeholder="010xxxxxxx" required="true">
+                  </div>
+                  <div class="mb-3 col-sm-6">
+                    <label class="form-label">Whatsapp</label>
+                    <input type="tel" class="form-control" placeholder="010xxxxxxx" required="true">
+                  </div>
+                  <div class="mb-3 col-sm-6">
+                    <label class="form-label">Telegram</label>
+                    <input type="text" class="form-control" placeholder="telegram" required="true">
+                  </div>
+                  <div class="mb-3 col-sm-6">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="info@example.com" required="true">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Box End -->
+          </div>
+          <!-- End Step -->
+
+          <!-- Start Step -->
+          <div class="step">
+            <div class="row">
+              <div class="mb-3 mb-md-0 col-md-8">
+                <!-- Box Start -->
+                <div class="card">
+                  <div class="card-header"><i class="far fa-map-marked-alt me-1"></i>Map</div>
+                  <div class="card-body">
+                    <input type="hidden" class="form-control" id="latitude" name="latitude" value="">
+                    <input type="hidden" class="form-control" id="longitude" name="longitude" value="">
+                    <div id="google_map" style="width: 100%; height: 450px;"></div>
+                  </div>
+                </div>
+                <!-- Box End -->
+              </div>
+              <div class="mb-3 mb-md-0 col-md-4">
+                <!-- Box Start -->
+                <div class="card">
+                  <div class="card-header">
+                    <i class="far fa-map-marker-alt me-1"></i>
+                    Location
+                  </div>
+                  <div class="card-body">
+                    <div class="mb-3">
+                      <label class="form-label" for="country-select">Country</label>
+                      <select class="form-select" required="true" name="country" id="country-select">
+                        <option value="">Choose</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" for="city-select">City</label>
+                      <select class="form-select" required="true" name="city" id="city-select">
+                        <option value="">Choose</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" for="area-select">Area</label>
+                      <select class="form-select" required="true" name="area" id="area-select">
+                        <option value="">Choose</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Address</label>
+                      <input type="text" class="form-control" placeholder="Address" required="true">
+                    </div>
+                  </div>
+                </div>
+                <!-- Box End -->
+              </div>
+            </div>
+          </div>
+          <!-- End Step -->
+
+
+          <!-- Start Step -->
+          <div class="step">
+            <div class="row">
+              <div class="mb-3 mb-md-0 col-md-8">
+                <!-- Box Start -->
+                <div class="card">
+                  <div class="card-header"><i class="far fa-images me-1"></i>Gallery</div>
+                  <div class="card-body">
+                    <div class="form-field-file mb-3">
+                      <input type="file" class="dropify" data-height="150" data-allowed-file-extensions="jpg png pdf">
+                    </div>
+                    <div class="row row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-5  g-3">
+                      <div class="img">
+                        <img src="@@webRoot/assets/images/post-03.jpg" class="img-fluid img-thumbnail" alt="...">
+                      </div>
+                      <div class="img">
+                        <img src="@@webRoot/assets/images/post-03.jpg" class="img-fluid img-thumbnail" alt="...">
+                      </div>
+                      <div class="img">
+                        <img src="@@webRoot/assets/images/post-03.jpg" class="img-fluid img-thumbnail" alt="...">
+                      </div>
+                      <div class="img">
+                        <img src="@@webRoot/assets/images/post-03.jpg" class="img-fluid img-thumbnail" alt="...">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Box End -->
+              </div>
+              <div class="mb-3 mb-md-0 col-md-4">
+                <!-- Box Start -->
+                <div class="card">
+                  <div class="card-header">
+                    <i class="far fa-image me-1"></i>
+                    Image
+                  </div>
+                  <div class="card-body">
+                    <input type="file" class="dropify" data-height="150" data-allowed-file-extensions="jpg png pdf">
+                  </div>
+                </div>
+                <!-- Box End -->
+              </div>
+            </div>
+          </div>
+          <!-- End Step -->
+
+          <div class="actions d-flex justify-content-between">
+            <button data-prev type="button" class="btn btn-outline-secondary btn-lg">Prev</button>
+            <button data-next type="button" class="btn btn-success btn-lg">Next</button>
+            <button data-submit type="submit" class="btn btn-success btn-lg">Submit</button>
+          </div>
+        </div>
+      </form>
+
+
+
     </div>
   </div>
   <footer class="footer_copyright">
@@ -22,7 +342,51 @@
       </script>
     </p>
   </footer>
-
 </main>
+ 
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFQzpPr6jdJBXw3U7AAaExeUumsGhK6GY&callback=initMap&v=weekly"
+  defer></script>
 
+<script>
+  /**
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+  function initMap() {
+    const myLatlng = { lat: 27, lng: 36 };
+    const map = new google.maps.Map(document.getElementById("google_map"), {
+      zoom: 8,
+      center: myLatlng,
+        mapTypeControl: true,
+      scrollwheel: false,
+    });
+    // // Create the initial InfoWindow.
+    let infoWindow = new google.maps.InfoWindow({
+      // content: "Click the map to get Lat/Lng!",
+         map: map,
+      position: myLatlng,
+    });
+ 
+    map.addListener("click", (mapsMouseEvent) => {
+      // Close the current InfoWindow.
+      infoWindow.close();
+      // Create a new InfoWindow.
+      infoWindow = new google.maps.InfoWindow({
+        position: mapsMouseEvent.latLng,
+      });
+      // infoWindow.setContent(
+      //   JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
+      // );
+      infoWindow.open(map); 
+            var location = mapsMouseEvent.latLng.toJSON();
+      document.getElementById('latitude').value = location.lat;
+      document.getElementById('longitude').value = location.lat; 
+    });
+  }
+
+  window.initMap = initMap;
+
+</script>
 @@include('./partails/footer-dashboard.html')

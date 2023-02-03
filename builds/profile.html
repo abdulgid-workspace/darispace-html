@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>Profile</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -61,57 +61,40 @@
     <div class="main-content">
       <div class="d-flex flex-wrap flex-md-nowrap mb-4">
         <div class="mb-4 me-0 mb-md-0 me-md-auto">
-          <h1 class="h3 mb-0">Welcome back, Ahmed Abdulgid!</h1>
-        </div>
-        <div><a href="./add-new.html" class="btn btn-primary btn-lg"><i class="far fa-layer-plus me-2"></i>Add
-            New Property</a></div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 col-xl-3 mb-3">
-          <div class="box-statistic">
-            <span class="icon bg-secondary-subtle border border-secondary-subtle text-secondary">
-              <i class="far fa-layer-group"></i>
-            </span>
-            <div class="content">
-              <h3 class="mb-0">29</h3>
-              <p>Properties</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xl-3 mb-3">
-          <div class="box-statistic">
-            <span class="icon bg-primary-subtle border border-primary-subtle text-primary">
-              <i class="far fa-layer-group"></i>
-            </span>
-            <div class="content">
-              <h3 class="mb-0">29</h3>
-              <p>Properties</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xl-3 mb-3">
-          <div class="box-statistic">
-            <span class="icon bg-danger-subtle border border-danger-subtle text-danger">
-              <i class="far fa-layer-group"></i>
-            </span>
-            <div class="content">
-              <h3 class="mb-0">29</h3>
-              <p>Properties</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xl-3 mb-3">
-          <div class="box-statistic">
-            <span class="icon bg-success-subtle border border-success-subtle text-success">
-              <i class="far fa-layer-group"></i>
-            </span>
-            <div class="content">
-              <h3 class="mb-0">29</h3>
-              <p>Properties</p>
-            </div>
-          </div>
+          <h1 class="h3 mb-0">Profile</h1>
         </div>
       </div>
+
+      <form>
+
+        <div class="card">
+          <div class="card-header"><i class="far fa-user me-1"></i>Profile</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="mb-3">
+                  <label class="form-label">Name</label>
+                  <input type="number" class="form-control" value="ahmedabdulgid">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Tel</label>
+                  <input type="tel" class="form-control" value="01032700450">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-field-file mb-3">
+                  <input type="file" class="dropify" data-height="150" data-allowed-file-extensions="jpg png pdf">
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg mt-4">Submit</button>
+          </div>
+        </div>
+
+      </form>
+
+
+
     </div>
   </div>
   <footer class="footer_copyright">
@@ -123,7 +106,6 @@
       </script>
     </p>
   </footer>
-
 </main>
 
  

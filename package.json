@@ -43,10 +43,13 @@
         "animate.css": "^4.1.1",
         "bootstrap": "^5.2.3",
         "browser-sync-client": "^2.27.11",
+        "dropify": "^0.2.2",
         "gulp-html-minify": "^0.0.14",
         "jquery": "^3.6.1",
+        "location-picker": "^1.1.1",
         "mat-tab-swiper": "^1.1.16",
         "normalize.css": "^8.0.1",
+        "parsleyjs": "^2.9.2",
         "swiper": "^6.8.4",
         "wow.js": "^1.2.2"
     },

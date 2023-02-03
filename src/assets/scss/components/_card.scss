@@ -2,3 +2,13 @@
   border: none;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.07);
 }
+
+.card-header {
+  --bs-card-cap-bg: #fff;
+  --bs-card-border-color: var(--grey);
+  font-size: 18px;
+  color: var(--black);
+  font-weight: 600;
+  --bs-card-cap-padding-y: 8px;
+  --bs-card-cap-padding-x: 16px;
+}

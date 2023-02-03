@@ -2,9 +2,9 @@
   position: relative;
   padding-top: 90px;
   padding-bottom: 71px;
-       @include media-lg{ 
-   padding-top: 81px;
-    }
+  @include media-lg {
+    padding-top: 81px;
+  }
   .main_wrapper {
     display: flex;
   }
@@ -32,6 +32,19 @@
     @include media-lg {
       left: 0;
     }
+  }
+
+  .form-control,
+  .form-select {
+    padding: 7px 10px;
+    background-color: var(--grey);
+    border-color: var(--grey);
+    border-radius: 5px;
+    font-size: 0.875rem;
+  }
+  .form-label {
+    font-size: 0.875rem;
+    margin-bottom: 4px;
   }
 }
 

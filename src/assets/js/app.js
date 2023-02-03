@@ -1,27 +1,13 @@
 // Import Vendors
 import $ from "jquery";
-import { Swiper, Pagination, Autoplay, Thumbs, Navigation } from "swiper";
-// import * as Popper from "@popperjs/core";
-// import * as bootstrap from "bootstrap";
-// // Import Vendors
-// import SwiperCore, {
-//   Swiper,
-//   Navigation,
-//   Pagination,
-//   Autoplay,
-//   EffectFade,
-//   Thumbs,
-// } from "swiper/core";
-// import Swup from "swup";
-// import SwupFormsPlugin from "@swup/forms-plugin";
-// import SwupScrollPlugin from "@swup/scroll-plugin";
+import parsley from "parsleyjs";
+import dropify from "dropify";
 
-// window.Swiper = Swiper;
+import { Swiper, Pagination, Autoplay, Thumbs, Navigation } from "swiper";
 
 window.$ = $;
 window.jQuery = $;
-// window.Popper = Popper;
-// window.bootstrap = bootstrap;
+window.parsley = parsley;
 
 /* ------------------------------------------------------------------------- *
  * INIT COMPONENTS
@@ -222,7 +208,6 @@ window.jQuery = $;
 window.addEventListener("DOMContentLoaded", function () {
   (function () {
     Swiper.use([Navigation, Pagination, Autoplay]);
-
     // Property Gallery
     const home = new Swiper(".single-property-gallery .swiper", {
       slidesPerView: 1,
@@ -298,5 +283,146 @@ window.addEventListener("DOMContentLoaded", function () {
         },
       },
     });
+  })();
+  // Form Multi Step
+  (function () {
+    (function () {
+      var Step, Steps;
+
+      Steps = class Steps {
+        constructor(div) {
+          this.div = div;
+          if (this.div){
+            this.steps = [...this.div.querySelectorAll(".step")].map((e, i) => {
+              return new Step(this.div, e, i);
+            });
+
+          }
+          this.parsley = $(this.div).parsley();
+          this.currentIdx = 0;
+          this.setupActions();
+          this.toggleButtons();
+          return;
+        }
+        stepDirection(sign) {
+          var targIdx;
+          targIdx = this.currentIdx + sign;
+          if (targIdx < 0 || targIdx > this.steps.length - 1) {
+            throw "can't step that far";
+          }
+          if (this.currentIdx > targIdx) {
+            return this.stepTo(targIdx);
+          }
+          if (this.currentIdx < targIdx) {
+            this.parsley = $(this.div).parsley();
+            console.log(this.parsley);
+            var $this = this;
+            this.parsley
+              .whenValidate({
+                group: "block-" + $this.currentIdx,
+              })
+              .done(function () {
+                // console.log("validation done");
+                return $this.stepTo(targIdx);
+              });
+          }
+        }
+        stepTo(targIdx) {
+          this.steps[this.currentIdx].hideStep();
+          this.steps[targIdx].showStep();
+          this.currentIdx = targIdx;
+          return this.toggleButtons();
+        }
+        toggleButtons() {
+          if (this.actions){
+this.actions.prev.disabled = this.currentIdx === 0;
+let submitBtn = this.div.querySelector("[data-submit]");
+if (this.currentIdx === this.steps.length - 1) {
+  submitBtn.style.display = "block";
+  this.actions.next.style.display = "none";
+} else {
+  submitBtn.style.display = "none";
+  this.actions.next.style.display = "block";
+}
+          } 
+        }
+        setupActions() {
+          // console.log(this.div);
+          if (this.div){
+            this.actions = {
+              prev: this.div.querySelector("[data-prev]"),
+              next: this.div.querySelector("[data-next]"),
+              submit: this.div.querySelector("[data-submit]"),
+            };
+          this.actions.prev.addEventListener("click", () => {
+            return this.stepDirection(-1);
+          });
+          return this.actions.next.addEventListener("click", () => {
+            return this.stepDirection(1);
+          });
+          return this.actions.submit.addEventListener("click", () => {
+            return this.stepDirection(1);
+          });
+          }
+        }
+      };
+
+      Step = class Step {
+        constructor(parent, el, index) {
+          this.parent = parent;
+          this.el = el;
+          this.index = index;
+          this.indicatorWrapper = document.querySelector(".steps__indicators");
+          // this.addIndicators();
+          this.indicators = document.querySelectorAll(".steps__indicators li");
+          $(this.el)
+            .find(".form-control, .form-select")
+            .attr("data-parsley-group", "block-" + index);
+          // $(this.el)
+          //   .find("select")
+          //   .attr("data-parsley-group", "block-" + index);
+        }
+        addIndicators() {
+          const indicatorListitem = document.createElement("li");
+          const indicatorText = document.createTextNode(this.index);
+          indicatorListitem.appendChild(indicatorText);
+          this.indicatorWrapper.appendChild(indicatorListitem);
+        }
+        hideStep() {
+          this.indicators[this.index].classList.add("btn-secondary");
+          this.indicators[this.index].classList.remove("btn-success");
+          return (this.el.style.display = "none");
+        }
+        showStep() {
+          const currentEle = this.indicators[this.index];
+          const prevEle = currentEle.previousSibling.previousSibling;
+          if (prevEle) {
+            prevEle.classList.remove("btn-secondary");
+            prevEle.classList.add("btn-outline-success");
+          }
+          currentEle.classList.remove("btn-outline-success");
+          currentEle.classList.add("btn-success");
+          return (this.el.style.display = "block");
+        }
+      };
+      var ready = function () {
+        if (document.readyState != "loading") {
+          init();
+        } else {
+          document.addEventListener("DOMContentLoaded", init());
+        }
+      };
+      var init = function () {
+        //return new Steps(document.querySelector(".steps"));
+        return new Steps(document.querySelector(".form-wizerd"));
+      };
+      ready();
+    }.call(this));
+  })();
+
+
+  // Dropfiy
+  (function(){
+    $(".dropify").dropify();
   })();
 });

@@ -1,0 +1,56 @@
+@@include('./partails/header-dashboard.html',{"title": "Profile"})
+
+<main class="app-main dashboard-main">
+  <div class="main_wrapper">
+    @@include('./partails/menu-dashboard.html')
+    <div class="main-content">
+      <div class="d-flex flex-wrap flex-md-nowrap mb-4">
+        <div class="mb-4 me-0 mb-md-0 me-md-auto">
+          <h1 class="h3 mb-0">Profile</h1>
+        </div>
+      </div>
+
+      <form>
+
+        <div class="card">
+          <div class="card-header"><i class="far fa-user me-1"></i>Profile</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="mb-3">
+                  <label class="form-label">Name</label>
+                  <input type="number" class="form-control" value="ahmedabdulgid">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Tel</label>
+                  <input type="tel" class="form-control" value="01032700450">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-field-file mb-3">
+                  <input type="file" class="dropify" data-height="150" data-allowed-file-extensions="jpg png pdf">
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg mt-4">Submit</button>
+          </div>
+        </div>
+
+      </form>
+
+
+
+    </div>
+  </div>
+  <footer class="footer_copyright">
+    <p>
+      <script>
+        var dateNow = new Date(),
+          year = dateNow.getFullYear();
+        document.write("Copyright &copy; " + year + ' Darispace.')
+      </script>
+    </p>
+  </footer>
+</main>
+
+@@include('./partails/footer-dashboard.html')
