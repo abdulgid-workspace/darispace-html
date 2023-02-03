@@ -1,10 +1,13 @@
 .table-list-properties {
   thead{
   }
-  th:first-child,
-   td:first-child{
+  th:first-child {
     padding: 0 15px 15px;
   }
+   td:first-child{
+    padding:  15px;
+   }
+  
   tr {
     vertical-align: middle;
   }
