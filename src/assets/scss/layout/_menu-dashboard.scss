@@ -3,13 +3,13 @@
   top: 5.625rem;
   bottom: 0;
   left: 0;
-  width: 20rem;
+  width: var(--menu-dash);
   height: 100%;
   z-index: 99;
   @include media-lg { 
     top: 81px;
     width: 14.375rem;
-     left: -20rem;
+     left: -var(--menu-dash);
     opacity: 0;
     &::before {
       content: "";
@@ -30,7 +30,7 @@
     height: 100%;
     @include media-lg {
       transition: left 0.3s ease-in-out;
-      left: -20rem;
+      left: -var(--menu-dash);
     }
   }
   ul {

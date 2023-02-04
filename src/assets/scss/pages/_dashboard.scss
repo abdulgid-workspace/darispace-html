@@ -9,11 +9,11 @@
     display: flex;
   }
   .main-content {
-    margin-left: 320px;
-    width: calc(100% - 320px);
+    margin-left: var(--menu-dash);
+    width: calc(100% - var(--menu-dash));
     min-height: calc(100vh - 90px);
     background: var(--grey);
-    padding: 50px;
+    padding: 35px;
     @include media-lg {
       padding: 25px;
       width: 100%;
@@ -25,7 +25,7 @@
     margin-top: 0;
     position: absolute;
     right: 0;
-    left: 320px;
+    left: var(--menu-dash);
     bottom: 0;
     z-index: 99;
     background-color: var(--white);
